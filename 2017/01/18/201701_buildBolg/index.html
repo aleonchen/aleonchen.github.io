@@ -129,21 +129,46 @@
 
             <!-- Content -->
             <h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><p>搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要一台服务器，还需要一套管理和发布流程。Word哥，不要紧，本教程就是一步步整理我的整个搭建系统的流程，教小白从头搭建自己的博客系统。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先是要了解整个博客系统能够顺利发布需要那几个步骤，各位看官可以看下下面的流程图。（貌似hexo并不支持flowchat.js)<br><img src="/diagrams/201701_buildBolg-diagram-0.png" alt=""></p>
-<h1 id="系统篇"><a href="#系统篇" class="headerlink" title="系统篇"></a>系统篇</h1><p>首先是装脚手架，各种方便系统的安装需要以下工具，排名不分前后，因为还没有整理的非常好，这部分会不断的更新</p>
-<h2 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h2><p>翻墙是基础，不翻墙永远都是局域网下的奴隶。我试过非常多的翻墙工具和软件。<br><code>自己搭建VPN</code>，买台国外的服务器，顺便做代理。比较好搭建的是PPTP，但是macOS从v12之后就不再支持这种不安全的VPN方案，目前比较适合的是使用SS，目前还没有搭建过，过两天尝试下。BTW，国外的服务器靠谱的还是不少比如DigitalOcean, Linode等等，这又是一篇话题。</p>
-<p><code>第三方VPN</code> 免费的用过goagent，收费的从greenvpn开始，曲径等等。目前一直使用的是云梯，听过一期云梯创始人的podcast，他说制作云梯的初衷就是，翻墙是每个人的诉求，但是翻墙比较复杂，让大家都和GFW斗智斗勇，太浪费时间，恰好我们有经验交给我们好了。瞬间觉得，这个和我的价值观非常符合，节省大家的时间就是生产力，而实际上他们也没有让我失望，一直是我主力的翻墙手段之一。</p>
 <blockquote>
-<p>BTW 云梯出了App可以方便的在macOS和iOS切换状态，并且是有自动选择路由的功能，国内不代理，国外才代理（是不是好贴心）</p>
+<p>PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ⊙)，看来还有好长的路要走</p>
 </blockquote>
-<h2 id="Oh-My-Zsh-官网"><a href="#Oh-My-Zsh-官网" class="headerlink" title="Oh My Zsh 官网"></a>Oh My Zsh <a href="http://ohmyz.sh/" target="_blank" rel="external">官网</a></h2><p><img src="http://macshuo.com/wp-content/uploads/2013/07/zsh1.png" alt="zsh"><br>大部分工程师从windows迁移过来的一个非常核心的原因就是windows下面没有非常好用的shell。因为web编程的服务端大多都是Linux，极度依赖shell，下面你也将看到，基本上整个系统的搭建也是极度依赖于shell的脚本和各种包管理体系。所以第一步当然是安装shell。<br>Mac 自带了bash等shell环境，但是不得不说Mac自带的那些太弱了，比如高亮这个必备的功能就没有，所以定制不可避免。ZSH有什么好处我就不安利了，大家可以去看池大的文章（<a href="http://macshuo.com/?p=676" target="_blank" rel="external">原文链接</a>），包括后期的定制都可以找到很多线索。<br>自行安装脚本</p>
-<p><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</code></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先是要了解整个博客系统能够顺利发布需要那几个步骤，各位看官可以看下下面的流程图。（貌似hexo并不支持flowchat.js)<br><img src="/diagrams/201701_buildBolg-diagram-0.png" alt=""><br>先做个铺垫，基本上这是个程序员的建设历程，如果你觉得打开Terminal(命令行)，看着字符跑来跑去很有趣，那么你可以关闭本文了。本文有点高能，不太适合你，亦或者你是个颜值很高的人，你可以尝试联系我🍹。</p>
+<h1 id="系统篇"><a href="#系统篇" class="headerlink" title="系统篇"></a>系统篇</h1><p>大家觉得搞个bolg不就是去开个账号，然后开写就结束了？咳咳，作为一个动手能力强的程序员，怎么可能选择这么容易的方案？当然是从装脚手架开始，各种系统都要装上尝试下（比如在Markdown里面画流程图），然后打造一个轮子。为了记录，将需要的工具挨个记录和点评，排名不分前后。</p>
+<blockquote>
+<p>因为还没有整理的非常好，这部分会不断的更新。</p>
+</blockquote>
+<h2 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h2><p>翻墙是基础，如果你连翻墙是什么都不知道，请自己去Google（哥只能帮你到这里了 ┑(￣Д ￣)┍）。</p>
+<p>我试过非常多的翻墙工具和软件，一般来说分两种，自建和第三方，那么选哪种呢？理论上来说这两个都需要，因为你不知道谁会挂掉，但是如果第三方使用付费的，相对还是靠谱的，毕竟是商业公司。</p>
+<p><code>自建VPN</code>，买台国外的服务器，顺便做代理。比较好搭建的是PPTP，但是macOS从v12之后就不再支持这种不安全的VPN方案，目前比较适合的是使用SS，目前还没有搭建过，过两天尝试下。BTW，国外的服务器靠谱的还是不少比如DigitalOcean, Linode等等，这又是一篇话题。</p>
+<p><code>第三方VPN</code> 免费的用过goAgent，收费的试过Greenvpn开始，曲径等等。目前一直使用的是云梯。</p>
+<blockquote>
+<p>八卦一下,听过一期云梯创始人的讲座，他说<strong>“制作云梯的初衷就是，翻墙是每个人的诉求，但是翻墙比较复杂，让大家都和GFW斗智斗勇，太浪费时间，恰好我们有经验,交给我们好了”</strong>。这个和我的价值观非常符合，节省大家的时间就是生产力，而实际上他们也没有让我失望，一直是我主力的翻墙手段之一。<br>BTW: 云梯出了App可以方便的在macOS和iOS切换状态，并且是有自动选择路由的功能，国内不代理，国外才代理（是不是好贴心）</p>
+</blockquote>
+<h2 id="基础工具-Oh-My-Zsh-官网"><a href="#基础工具-Oh-My-Zsh-官网" class="headerlink" title="基础工具 - Oh My Zsh 官网"></a>基础工具 - Oh My Zsh <a href="http://ohmyz.sh/" target="_blank" rel="external">官网</a></h2><p><img src="http://macshuo.com/wp-content/uploads/2013/07/zsh1.png" alt="zsh"><br>大部分工程师从windows迁移过来的一个非常核心的原因就是windows下面没有非常好用的shell。因为web编程的服务端大多都是Linux，极度依赖shell，下面你也将看到，基本上整个系统的搭建也是极度依赖于shell的脚本和各种包管理体系。</p>
+<p>Mac自带了Bash等shell环境，但是太弱了，比如高亮这个必备的功能就没有，所以定制不可避免。ZSH有什么好处我就不安利了，大家可以去看池大的文章（<a href="http://macshuo.com/?p=676" target="_blank" rel="external">原文链接</a>），包括后期的定制都可以找到很多线索。</p>
+<p>自行安装脚本 <code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</code></p>
 <p>我比较喜欢简洁的配色，所以用的主题是avit</p>
-<h2 id="Home-brew-官网"><a href="#Home-brew-官网" class="headerlink" title="Home brew 官网"></a>Home brew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官网</a></h2><p>就像windows安装完系统，我的第一件事情就是安装360软件关键（别吐槽，这个货的确方便）就像苹果的App Store一样，有一个信任的软件安装入口和渠道是省了不少事情的。好在Mac下面有很多靠谱的软件安装工具。brew就是方便的软件之一，本身他是用ruby写就的，ruby也是包管理的鼻祖。</p>
+<blockquote>
+<p>需要一些基础的配置，后续在补充</p>
+</blockquote>
+<h2 id="安装系统-Home-brew-官网"><a href="#安装系统-Home-brew-官网" class="headerlink" title="安装系统 - Home brew 官网"></a>安装系统 - Home brew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官网</a></h2><p>就像windows安装完系统，我的第一件事情就是安装360软件管家（别吐槽，这个货的确方便）就像苹果的App Store一样，有一个信任的软件安装入口和渠道是省了不少事情的。好在Mac下面有很多靠谱的软件安装工具。brew就是方便的软件之一，本身他是用ruby写就的，ruby也是包管理的鼻祖。</p>
 <p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
-<p>装完之后，几乎所有的软件都可以用brew来安装，比如<code>brew cask sublime</code> 装sublime text软件，不过我还是习惯了去官网装这些常用的工具</p>
-<h2 id="MWeb-官网"><a href="#MWeb-官网" class="headerlink" title="MWeb 官网"></a>MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
-
+<p>装完之后，几乎所有的软件都可以用brew来安装，比如<code>brew cask sublime</code> 装sublime text软件</p>
+<h2 id="博客构建系统-Hexo-官网"><a href="#博客构建系统-Hexo-官网" class="headerlink" title="博客构建系统 - Hexo 官网"></a>博客构建系统 - Hexo <a href="https://hexo.io/" target="_blank" rel="external">官网</a></h2><p>在很早以前blog还是wordpress的天下，很多设计师和程序员靠定制wordpress的模板就可以横行天下。那是世界上最好的语言PHP写就的，不过太复杂，太古老，不是和我们新世纪的程序员。自从最大的男性交友社区Github推出pages服务以来，大家都在上面纷纷搭建系统，显得很酷(其实，主要是托管不要钱)。然后就出现了很多静态博客生成模板，最早期是Jekyll的，包括现在coding在内的很多git服务都有支持这个。但是但是，因为不可告人的原因，我选择了Hexo，而且的确比较好用</p>
+<p>Hexo 官网介绍</p>
+<blockquote>
+<p>A fast, simple &amp; powerful blog framework</p>
+</blockquote>
+<p>先去安装下:<br><code>npm install hexo-cli -g</code></p>
+<p>又冒出一个npm, 这个暂且不表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>弄完这几个命令，基本上，你就有了第一个blog，然后就可以开始愉快的写blog了？</p>
+<blockquote>
+<p>Too Young, Too Naive</p>
+</blockquote>
+<p>你连一个域名和服务器都没有咋就能有bolg？</p>
+<h2 id="Markdown编辑器-MWeb-官网"><a href="#Markdown编辑器-MWeb-官网" class="headerlink" title="Markdown编辑器 - MWeb 官网"></a>Markdown编辑器 - MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
+<h2 id="文档管理系统-GitHub"><a href="#文档管理系统-GitHub" class="headerlink" title="文档管理系统 - GitHub"></a>文档管理系统 - GitHub</h2>
 
             <!-- Tags -->
             
