@@ -96,7 +96,9 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <meta property="og:image" content="http://blog.aleonchen.com/diagrams/201701_buildBolg-diagram-0.png">
 <meta property="og:image" content="http://macshuo.com/wp-content/uploads/2013/07/zsh1.png">
-<meta property="og:updated_time" content="2017-01-23T06:49:50.000Z">
+<meta property="og:image" content="http://blog.aleonchen.com/media/github_pages.png">
+<meta property="og:image" content="http://blog.aleonchen.com/media/create_github_pages.png">
+<meta property="og:updated_time" content="2017-01-25T08:56:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白从零搭建博客系统">
 <meta name="twitter:description" content="起步搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要一台服务器，还需要一套管理和发布流程。Word哥，不要紧，本教程就是一步步整理我的整个搭建系统的流程，教小白从头搭建自己的博客系统。
@@ -350,6 +352,7 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <h2 id="安装系统-Home-brew-官网"><a href="#安装系统-Home-brew-官网" class="headerlink" title="安装系统 - Home brew 官网"></a>安装系统 - Home brew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官网</a></h2><p>就像windows安装完系统，我的第一件事情就是安装360软件管家（别吐槽，这个货的确方便）就像苹果的App Store一样，有一个信任的软件安装入口和渠道是省了不少事情的。好在Mac下面有很多靠谱的软件安装工具。brew就是方便的软件之一，本身他是用ruby写就的，ruby也是包管理的鼻祖。</p>
 <p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
 <p>装完之后，几乎所有的软件都可以用brew来安装，比如<code>brew cask sublime</code> 装sublime text软件</p>
+<h2 id="代码管理-Git"><a href="#代码管理-Git" class="headerlink" title="代码管理 - Git"></a>代码管理 - Git</h2><p>整个系统的文档管理都是基于Git的版本管理系统，可以用brew安装<br><code>brew install git</code></p>
 <h2 id="博客构建系统-Hexo-官网"><a href="#博客构建系统-Hexo-官网" class="headerlink" title="博客构建系统 - Hexo 官网"></a>博客构建系统 - Hexo <a href="https://hexo.io/" target="_blank" rel="external">官网</a></h2><p>在很早以前blog还是wordpress的天下，很多设计师和程序员靠定制wordpress的模板就可以横行天下。那是世界上最好的语言PHP写就的，不过太复杂，太古老，不是和我们新世纪的程序员。自从最大的男性交友社区Github推出pages服务以来，大家都在上面纷纷搭建系统，显得很酷(其实，主要是托管不要钱)。然后就出现了很多静态博客生成模板，最早期是Jekyll的，包括现在coding在内的很多git服务都有支持这个。但是但是，因为不可告人的原因，我选择了Hexo，而且的确比较好用</p>
 <p>Hexo 官网介绍</p>
 <blockquote>
@@ -358,14 +361,36 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <p>先去安装下:<br><code>npm install hexo-cli -g</code></p>
 <p>又冒出一个npm, 这个暂且不表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<p>弄完这几个命令，基本上，你就有了第一个blog，然后就可以开始愉快的写blog了？</p>
+<p>弄完这几个命令，不出意外地话会看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<p>浏览器里面访问下<code>http://localhost:4000/</code>基本上，你就有了第一个blog，然后就可以开始愉快的写blog了？</p>
 <blockquote>
 <p>Too Young, Too Naive</p>
 </blockquote>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>如果是你土豪，或者说你想自己尝试一下从零搭建一台博客服务器，那么你可以选择自己买台服务器。否则还是推荐用Github的Pages服务。一来，你有地方可以安防自己的博客文章，顺带有版本管理。二来，你也有了免费的博客空间，再搭配Hexo就可以把博客从本地搬到网上了，不过这两年GibHub经常被墙，还是要小心哈。<br>注册号Github创建好工程，创建项目仓库，记得在<code>Setting</code>里面修改GitHub Pages的相关设置，我这里选择<code>master branch</code><br><img src="media/github_pages.png" alt="github_pages"></p>
+<p>另外千万记得要设置<code>repository</code>名字为<code>username.github.io</code>，否则js和css静态文件是不会解析的，详情查看<code>GitHub Pages</code>的链接介绍<br><img src="media/create_github_pages.png" alt="create_github_pages"></p>
+<p>完事了修改<code>_config.yml</code> 中的deploy设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/aleonchen/aleonchen.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>刚才咱们已经用<code>hexo server</code>看过本地的博客没问题了。终于开始要发布到网上了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>纳尼，报错<br><code>ERROR Deployer not found: git</code><br>有人说hexo不支持https的git，其实不是的在V3里面可以的是的你少了个插件<br><code>npm install hexo-deployer-git --save</code></p>
+<p>第一次运行因为没有登录过github可能会出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*** Please tell me who you are.</div><div class="line"></div><div class="line">Run</div><div class="line"></div><div class="line">  git config --global user.email &quot;you@example.com&quot;</div><div class="line">  git config --global user.name &quot;Your Name&quot;</div></pre></td></tr></table></figure>
+<p>配置好即可</p>
+<p>应该可以看到效果了，访问下你的blog地址看看</p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>Hexo的好处之一就是容易更换主题，比如</p>
+<ul>
+<li><a href="https://github.com/klugjo/hexo-theme-magnetic" target="_blank" rel="external">magnetic</a> </li>
+<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a></li>
+</ul>
+<p>下面以magnetic为例：<br>首先在目录下安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/klugjo/hexo-theme-magnetic themes/magnetic</div></pre></td></tr></table></figure>
+<p>然后更新一下<code>_config.yml</code>文件将主题更换为 magnetic</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: magnetic</div></pre></td></tr></table></figure>
 <h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>首先得有一个自己的域名，各位可以去各大网站申请自己的域名，国内就是阿里云腾讯云，国外推荐Godaddy。我想说买域名还蛮容易的，不过域名叫什么名字蛮头痛的。</p>
-<h2 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h2><p>如果是你土豪，或者说你想自己尝试一下从零搭建一台博客服务器，那么你可以选择自己买台服务器。否则还是推荐用Github的Pages服务。一来，你有地方可以安防自己的博客文章，顺带有版本管理。二来，你也有了免费的博客空间，再搭配Hexo就可以把博客从本地搬到网上了，不过这两年GibHub经常被墙，还是要小心哈。</p>
 <h1 id="工具篇"><a href="#工具篇" class="headerlink" title="工具篇"></a>工具篇</h1><h2 id="Markdown编辑器-MWeb-官网"><a href="#Markdown编辑器-MWeb-官网" class="headerlink" title="Markdown编辑器 - MWeb 官网"></a>Markdown编辑器 - MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
-<h2 id="文档管理系统-GitHub"><a href="#文档管理系统-GitHub" class="headerlink" title="文档管理系统 - GitHub"></a>文档管理系统 - GitHub</h2>
+<h2 id="文档管理系统-GitHub"><a href="#文档管理系统-GitHub" class="headerlink" title="文档管理系统 - GitHub"></a>文档管理系统 - GitHub</h2><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
+
       
     </div>
 
@@ -508,7 +533,7 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统篇"><span class="nav-number">3.</span> <span class="nav-text">系统篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">3.1.</span> <span class="nav-text">翻墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">3.2.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">3.3.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">3.4.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名"><span class="nav-number">3.5.</span> <span class="nav-text">域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空间"><span class="nav-number">3.6.</span> <span class="nav-text">空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具篇"><span class="nav-number">4.</span> <span class="nav-text">工具篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档管理系统-GitHub"><span class="nav-number">4.2.</span> <span class="nav-text">文档管理系统 - GitHub</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统篇"><span class="nav-number">3.</span> <span class="nav-text">系统篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">3.1.</span> <span class="nav-text">翻墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">3.2.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">3.3.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码管理-Git"><span class="nav-number">3.4.</span> <span class="nav-text">代码管理 - Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">3.5.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布"><span class="nav-number">3.6.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.7.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名"><span class="nav-number">3.8.</span> <span class="nav-text">域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具篇"><span class="nav-number">4.</span> <span class="nav-text">工具篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档管理系统-GitHub"><span class="nav-number">4.2.</span> <span class="nav-text">文档管理系统 - GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">4.3.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
             
 
           </div>
