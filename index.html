@@ -633,7 +633,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: magnetic</div></pre></td></tr></table></figure>
 <h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>首先得有一个自己的域名，各位可以去各大网站申请自己的域名，国内就是阿里云腾讯云，国外推荐Godaddy。我想说买域名还蛮容易的，不过域名叫什么名字蛮头痛的。</p>
 <h1 id="工具篇"><a href="#工具篇" class="headerlink" title="工具篇"></a>工具篇</h1><h2 id="Markdown编辑器-MWeb-官网"><a href="#Markdown编辑器-MWeb-官网" class="headerlink" title="Markdown编辑器 - MWeb 官网"></a>Markdown编辑器 - MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
-<h2 id="文档管理系统-GitHub"><a href="#文档管理系统-GitHub" class="headerlink" title="文档管理系统 - GitHub"></a>文档管理系统 - GitHub</h2><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<h2 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h2><p>在写博客的时候会碰到一个问题，就是当你使用MWeb在本地撰写文章的时候，图片显示都是好的，但是发布到Github就无法显示图片了。仔细看了下其实是图片路径的问题。按照下面两个步骤操作既可以。</p>
+<ol>
+<li>在MWeb引入的时候，只引入<code>source</code>目录</li>
+<li>引入的时候设置拖入图片的保存位置为<strong>绝对路径</strong>,见下图(如果已经设置过，可以双击<code>source</code>)<br><img src="/media/source-1.png" alt="source"></li>
+</ol>
+<h2 id="常规维护"><a href="#常规维护" class="headerlink" title="常规维护"></a>常规维护</h2><p>每次写完文章之后按照这个顺序处理下即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
 
           
         
