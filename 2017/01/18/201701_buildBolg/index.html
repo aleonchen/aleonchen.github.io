@@ -99,7 +99,7 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <meta property="og:image" content="http://blog.aleonchen.com/media/github_pages.png">
 <meta property="og:image" content="http://blog.aleonchen.com/media/create_github_pages.png">
 <meta property="og:image" content="http://blog.aleonchen.com/media/source-1.png">
-<meta property="og:updated_time" content="2017-01-28T14:27:12.000Z">
+<meta property="og:updated_time" content="2017-01-28T14:35:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白从零搭建博客系统">
 <meta name="twitter:description" content="起步搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要一台服务器，还需要一套管理和发布流程。Word哥，不要紧，本教程就是一步步整理我的整个搭建系统的流程，教小白从头搭建自己的博客系统。
@@ -332,16 +332,9 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <p>PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ⊙)，看来还有好长的路要走</p>
 </blockquote>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先是要了解整个博客系统能够顺利发布需要那几个步骤，各位看官可以看下下面的流程图。（貌似hexo并不支持flowchat.js)<br><img src="/diagrams/201701_buildBolg-diagram-0.png" alt=""><br>先做个铺垫，基本上这是个程序员的建设历程，如果你觉得打开Terminal(命令行)，看着字符跑来跑去很有趣，那么你可以关闭本文了。本文有点高能，不太适合你，亦或者你是个颜值很高的人，你可以尝试联系我🍹。</p>
-<h1 id="系统篇"><a href="#系统篇" class="headerlink" title="系统篇"></a>系统篇</h1><p>大家觉得搞个bolg不就是去开个账号，然后开写就结束了？咳咳，作为一个动手能力强的程序员，怎么可能选择这么容易的方案？当然是从装脚手架开始，各种系统都要装上尝试下（比如在Markdown里面画流程图），然后打造一个轮子。为了记录，将需要的工具挨个记录和点评，排名不分前后。</p>
+<h1 id="设置篇"><a href="#设置篇" class="headerlink" title="设置篇"></a>设置篇</h1><p>大家觉得搞个bolg不就是去开个账号，然后开写就结束了？咳咳，作为一个动手能力强的程序员，怎么可能选择这么容易的方案？当然是从装脚手架开始，各种系统都要装上尝试下（比如在Markdown里面画流程图），然后打造一个轮子。为了记录，将需要的工具挨个记录和点评，排名不分前后。</p>
 <blockquote>
 <p>因为还没有整理的非常好，这部分会不断的更新。</p>
-</blockquote>
-<h2 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h2><p>翻墙是基础，如果你连翻墙是什么都不知道，请自己去Google（哥只能帮你到这里了 ┑(￣Д ￣)┍）。</p>
-<p>我试过非常多的翻墙工具和软件，一般来说分两种，自建和第三方，那么选哪种呢？理论上来说这两个都需要，因为你不知道谁会挂掉，但是如果第三方使用付费的，相对还是靠谱的，毕竟是商业公司。</p>
-<p><code>自建VPN</code>，买台国外的服务器，顺便做代理。比较好搭建的是PPTP，但是macOS从v12之后就不再支持这种不安全的VPN方案，目前比较适合的是使用SS，目前还没有搭建过，过两天尝试下。BTW，国外的服务器靠谱的还是不少比如DigitalOcean, Linode等等，这又是一篇话题。</p>
-<p><code>第三方VPN</code> 免费的用过goAgent，收费的试过Greenvpn开始，曲径等等。目前一直使用的是云梯。</p>
-<blockquote>
-<p>八卦一下,听过一期云梯创始人的讲座，他说<strong>“制作云梯的初衷就是，翻墙是每个人的诉求，但是翻墙比较复杂，让大家都和GFW斗智斗勇，太浪费时间，恰好我们有经验,交给我们好了”</strong>。这个和我的价值观非常符合，节省大家的时间就是生产力，而实际上他们也没有让我失望，一直是我主力的翻墙手段之一。<br>BTW: 云梯出了App可以方便的在macOS和iOS切换状态，并且是有自动选择路由的功能，国内不代理，国外才代理（是不是好贴心）</p>
 </blockquote>
 <h2 id="基础工具-Oh-My-Zsh-官网"><a href="#基础工具-Oh-My-Zsh-官网" class="headerlink" title="基础工具 - Oh My Zsh 官网"></a>基础工具 - Oh My Zsh <a href="http://ohmyz.sh/" target="_blank" rel="external">官网</a></h2><p><img src="http://macshuo.com/wp-content/uploads/2013/07/zsh1.png" alt="zsh"><br>大部分工程师从windows迁移过来的一个非常核心的原因就是windows下面没有非常好用的shell。因为web编程的服务端大多都是Linux，极度依赖shell，下面你也将看到，基本上整个系统的搭建也是极度依赖于shell的脚本和各种包管理体系。</p>
 <p>Mac自带了Bash等shell环境，但是太弱了，比如高亮这个必备的功能就没有，所以定制不可避免。ZSH有什么好处我就不安利了，大家可以去看池大的文章（<a href="http://macshuo.com/?p=676" target="_blank" rel="external">原文链接</a>），包括后期的定制都可以找到很多线索。</p>
@@ -360,7 +353,7 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <p>A fast, simple &amp; powerful blog framework</p>
 </blockquote>
 <p>先去安装下:<br><code>npm install hexo-cli -g</code></p>
-<p>又冒出一个npm, 这个暂且不表</p>
+<p>又冒出一个npm, 这个暂且不表可以先用<code>brew install npm</code>完成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
 <p>弄完这几个命令，不出意外地话会看到</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
@@ -388,15 +381,22 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/klugjo/hexo-theme-magnetic themes/magnetic</div></pre></td></tr></table></figure>
 <p>然后更新一下<code>_config.yml</code>文件将主题更换为 magnetic</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: magnetic</div></pre></td></tr></table></figure>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>首先得有一个自己的域名，各位可以去各大网站申请自己的域名，国内就是阿里云腾讯云，国外推荐Godaddy。我想说买域名还蛮容易的，不过域名叫什么名字蛮头痛的。</p>
-<h1 id="工具篇"><a href="#工具篇" class="headerlink" title="工具篇"></a>工具篇</h1><h2 id="Markdown编辑器-MWeb-官网"><a href="#Markdown编辑器-MWeb-官网" class="headerlink" title="Markdown编辑器 - MWeb 官网"></a>Markdown编辑器 - MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>首先得有一个自己的域名，各位可以去各大网站申请自己的域名，国内就是阿里云腾讯云，国外推荐Godaddy。在CName中设置域名指向自己的github page 主页，我这里是aleonchen.github.io<br>然后在Github Pages -&gt; Custom domain 设置自己的域名<code>blog.aleonchen.com</code></p>
+<h1 id="写作篇"><a href="#写作篇" class="headerlink" title="写作篇"></a>写作篇</h1><h2 id="Markdown编辑器-MWeb-官网"><a href="#Markdown编辑器-MWeb-官网" class="headerlink" title="Markdown编辑器 - MWeb 官网"></a>Markdown编辑器 - MWeb <a href="http://zh.mweb.im/index.html" target="_blank" rel="external">官网</a></h2><p>Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。<br>MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：<a href="http://sspai.com/33855" target="_blank" rel="external">这里</a></p>
 <h2 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h2><p>在写博客的时候会碰到一个问题，就是当你使用MWeb在本地撰写文章的时候，图片显示都是好的，但是发布到Github就无法显示图片了。仔细看了下其实是图片路径的问题。按照下面两个步骤操作既可以。</p>
 <ol>
 <li>在MWeb引入的时候，只引入<code>source</code>目录</li>
 <li>引入的时候设置拖入图片的保存位置为<strong>绝对路径</strong>,见下图(如果已经设置过，可以双击<code>source</code>)<br><img src="/media/source-1.png" alt="source"></li>
 </ol>
 <h2 id="常规维护"><a href="#常规维护" class="headerlink" title="常规维护"></a>常规维护</h2><p>每次写完文章之后按照这个顺序处理下即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h2><p>翻墙是基础，如果你连翻墙是什么都不知道，请自己去Google（哥只能帮你到这里了 ┑(￣Д ￣)┍）。</p>
+<p>我试过非常多的翻墙工具和软件，一般来说分两种，自建和第三方，那么选哪种呢？理论上来说这两个都需要，因为你不知道谁会挂掉，但是如果第三方使用付费的，相对还是靠谱的，毕竟是商业公司。</p>
+<p><code>自建VPN</code>，买台国外的服务器，顺便做代理。比较好搭建的是PPTP，但是macOS从v12之后就不再支持这种不安全的VPN方案，目前比较适合的是使用SS，目前还没有搭建过，过两天尝试下。BTW，国外的服务器靠谱的还是不少比如DigitalOcean, Linode等等，这又是一篇话题。</p>
+<p><code>第三方VPN</code> 免费的用过goAgent，收费的试过Greenvpn开始，曲径等等。目前一直使用的是云梯。</p>
+<blockquote>
+<p>八卦一下,听过一期云梯创始人的讲座，他说<strong>“制作云梯的初衷就是，翻墙是每个人的诉求，但是翻墙比较复杂，让大家都和GFW斗智斗勇，太浪费时间，恰好我们有经验,交给我们好了”</strong>。这个和我的价值观非常符合，节省大家的时间就是生产力，而实际上他们也没有让我失望，一直是我主力的翻墙手段之一。<br>BTW: 云梯出了App可以方便的在macOS和iOS切换状态，并且是有自动选择路由的功能，国内不代理，国外才代理（是不是好贴心）</p>
+</blockquote>
+<p><a href="https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://dslztx.github.io/blog/2016/06/25/%E4%BD%BF%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
 
       
     </div>
@@ -540,7 +540,7 @@ PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统篇"><span class="nav-number">3.</span> <span class="nav-text">系统篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">3.1.</span> <span class="nav-text">翻墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">3.2.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">3.3.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码管理-Git"><span class="nav-number">3.4.</span> <span class="nav-text">代码管理 - Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">3.5.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布"><span class="nav-number">3.6.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.7.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名"><span class="nav-number">3.8.</span> <span class="nav-text">域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具篇"><span class="nav-number">4.</span> <span class="nav-text">工具篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片问题"><span class="nav-number">4.2.</span> <span class="nav-text">图片问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常规维护"><span class="nav-number">4.3.</span> <span class="nav-text">常规维护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">4.4.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置篇"><span class="nav-number">3.</span> <span class="nav-text">设置篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">3.1.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">3.2.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码管理-Git"><span class="nav-number">3.3.</span> <span class="nav-text">代码管理 - Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">3.4.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布"><span class="nav-number">3.5.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.6.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名"><span class="nav-number">3.7.</span> <span class="nav-text">域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写作篇"><span class="nav-number">4.</span> <span class="nav-text">写作篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片问题"><span class="nav-number">4.2.</span> <span class="nav-text">图片问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常规维护"><span class="nav-number">4.3.</span> <span class="nav-text">常规维护</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">5.1.</span> <span class="nav-text">翻墙</span></a></li></ol></li></ol></div>
             
 
           </div>
