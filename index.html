@@ -271,6 +271,159 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.aleonchen.com/2017/02/03/MTA/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="aleonchen">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/media/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="胡萝卜手">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="胡萝卜手" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/03/MTA/" itemprop="url">
+                  Hexo添加腾讯MTA分析支持
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T20:26:37+08:00">
+                2017-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/03/MTA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/MTA/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/03/MTA/" class="leancloud_visitors" data-flag-title="Hexo添加腾讯MTA分析支持">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h3><p>搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了<a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT的模板</a>也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置指南</a>，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。</p>
+<h3 id="腾讯统计"><a href="#腾讯统计" class="headerlink" title="腾讯统计"></a>腾讯统计</h3><p>在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用<a href="mta.qq.com">腾讯移动分析</a>，不仅可以支持应用统计、HTML5网页统计甚至还有小程序的统计。支持用户画像、区域和行为分析等。之前项目使用MTA比较熟悉，所以也想自己的Blog可以支持。<br><img src="/media/mta_sum-1.png" alt="mta_su"><br><img src="/media/mta_devices-1.png" alt="mta_devices"></p>
+<h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>稍微研究了下NexT的代码，其实只要修改三个地方就可以了。</p>
+<p>1.在NexT的<code>_config.yml</code>下面添加一个MTA的设置，MTA只要去创建一个HTML5的应用即可，填入你所申请的<code>App Id</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Tencent MTA ID</div><div class="line">tencent_mta: your app id</div></pre></td></tr></table></figure>
+<p>2.修改<code>analytics.swig</code>文件，添加一个新的js模板，路径为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">layout/_scripts/third-party/analytics.swig</div></pre></td></tr></table></figure>
+<p>添加一行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% include &apos;analytics/tencent-mta.swig&apos; %&#125;</div></pre></td></tr></table></figure>
+<p>3.在<code>layout/_scripts/third-party/analytics</code>目录下面添加一个新文件<code>tencent-analytics.swig</code>，内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.tencent_mta %&#125;</div><div class="line">&lt;script&gt;</div><div class="line">  	var _mtac = &#123;&#125;;</div><div class="line">  	(function() &#123;</div><div class="line">  		var mta = document.createElement(&quot;script&quot;);</div><div class="line">  		mta.src = &quot;http://pingjs.qq.com/h5/stats.js?v2.0.2&quot;;</div><div class="line">  		mta.setAttribute(&quot;name&quot;, &quot;MTAH5&quot;);</div><div class="line">  		mta.setAttribute(&quot;sid&quot;, &quot;&#123;&#123;theme.tencent_mta&#125;&#125;&quot;);</div><div class="line"></div><div class="line">  		var s = document.getElementsByTagName(&quot;script&quot;)[0];</div><div class="line">  		s.parentNode.insertBefore(mta, s);</div><div class="line">  	&#125;)();</div><div class="line">&lt;/script&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>最后，在本地<code>hexo server</code>跑起来看了下 mta的代码有没有添加到页面，如果有了，就OK了。</p>
+<h3 id="代码-amp-PR"><a href="#代码-amp-PR" class="headerlink" title="代码 &amp; PR"></a>代码 &amp; PR</h3><p>如果有问题，可以去看代码 <a href="https://github.com/aleonchen/hexo-theme-next" target="_blank" rel="external">https://github.com/aleonchen/hexo-theme-next</a></p>
+<p>也给作者提交了一个pull request，希望能够添加到官方 😊</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://blog.aleonchen.com/2017/01/28/PyCharm-Debug/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -808,7 +961,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
