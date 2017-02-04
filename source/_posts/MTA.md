@@ -1,7 +1,7 @@
 ---
-title: Hexo添加腾讯MTA分析支持
+title: Hexo添加腾讯移动分析(MTA)支持
 date: 2017-02-03 20:26:37
-tags:
+tags: hexo
 ---
 ### 缘起
 搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了[NexT的模板](http://notes.iissnan.com/)也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的[配置指南](http://theme-next.iissnan.com/)，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
