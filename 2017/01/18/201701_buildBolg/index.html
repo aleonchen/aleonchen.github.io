@@ -86,33 +86,27 @@
 
 
 
-<meta name="description" content="摘要详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
+<meta name="description" content="摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
 
-Last Update: 2017-02-04
-
-正文起步搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要">
+Last Update: 2017-02-04">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小白从零搭建博客系统">
 <meta property="og:url" content="http://aleonchen.com/2017/01/18/201701_buildBolg/index.html">
 <meta property="og:site_name" content="成天玩的爹">
-<meta property="og:description" content="摘要详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
+<meta property="og:description" content="摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
 
-Last Update: 2017-02-04
-
-正文起步搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要">
+Last Update: 2017-02-04">
 <meta property="og:image" content="http://aleonchen.com/diagrams/201701_buildBolg-diagram-0.png">
 <meta property="og:image" content="http://macshuo.com/wp-content/uploads/2013/07/zsh1.png">
 <meta property="og:image" content="http://aleonchen.com/media/github_pages.png">
 <meta property="og:image" content="http://aleonchen.com/media/create_github_pages.png">
 <meta property="og:image" content="http://aleonchen.com/media/source-1.png">
-<meta property="og:updated_time" content="2017-02-04T03:47:55.000Z">
+<meta property="og:updated_time" content="2017-02-04T04:50:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白从零搭建博客系统">
-<meta name="twitter:description" content="摘要详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
+<meta name="twitter:description" content="摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
 
-Last Update: 2017-02-04
-
-正文起步搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要">
+Last Update: 2017-02-04">
 <meta name="twitter:image" content="http://aleonchen.com/diagrams/201701_buildBolg-diagram-0.png">
 
 
@@ -412,10 +406,11 @@ Last Update: 2017-02-04
       
 
       
-        <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。</p>
+        <p>摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。</p>
 <blockquote>
 <p>Last Update: 2017-02-04</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h2><p>搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要一台服务器，还需要一套管理和发布流程。Word哥，不要紧，本教程就是一步步整理我的整个搭建系统的流程，教小白从头搭建自己的博客系统。</p>
 <blockquote>
 <p>PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ⊙)，看来还有好长的路要走</p>
@@ -481,9 +476,19 @@ Last Update: 2017-02-04
 <li>引入的时候设置拖入图片的保存位置为<strong>绝对路径</strong>,见下图(如果已经设置过，可以双击<code>source</code>)<br><img src="/media/source-1.png" alt="source"></li>
 </ol>
 <h3 id="常规维护"><a href="#常规维护" class="headerlink" title="常规维护"></a>常规维护</h3><p>每次写完文章之后输入这个即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -g d</div></pre></td></tr></table></figure></p>
-<h3 id="Hexo-配置技巧"><a href="#Hexo-配置技巧" class="headerlink" title="Hexo 配置技巧"></a>Hexo 配置技巧</h3><p>首页显示文章摘要 <a href="http://www.xbool.com/article-not-show-home" target="_blank" rel="external">参考链接</a><br>在next主题的_config.yml文件中，查找auto_excerpt，找到如下部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt</div><div class="line">auto_excerpt:</div><div class="line">enable: false</div><div class="line">length: 150</div></pre></td></tr></table></figure>
-<p>只要把这个enable 改为true就可以实现首页显示预览，而不用全部显示！</p>
+<h3 id="Hexo-配置技巧"><a href="#Hexo-配置技巧" class="headerlink" title="Hexo 配置技巧"></a>Hexo 配置技巧</h3><ol>
+<li><p>如何在首页设置「阅读全文」？<br>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT官方提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
+</li>
+<li><p>在文章中使用 <code>&lt;!-- more --&gt;</code>手动进行截断，Hexo 提供的方式 <strong>推荐，本站用了这种方法</strong></p>
+</li>
+<li>在文章的 front-matter 中添加 description，并提供文章摘录</li>
+<li>自动形成摘要，在 主题配置文件 中添加：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">auto_excerpt:</div><div class="line">  enable: true</div><div class="line">  length: 150</div></pre></td></tr></table></figure>
+<p>默认截取的长度为 150 字符，可以根据需要自行设定，本站也设置了防止没有做人工摘要。</p>
+<blockquote>
+<p>建议使用<code>&lt;!-- more --&gt;</code>（即第一种方式），除了可以精确控制需要显示的摘录内容以外， 这种方式也可以让 Hexo 中的插件更好的识别。</p>
+</blockquote>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h2><p>翻墙是基础，如果你连翻墙是什么都不知道，请自己去Google（哥只能帮你到这里了 ┑(￣Д ￣)┍）。</p>
 <p>我试过非常多的翻墙工具和软件，一般来说分两种，自建和第三方，那么选哪种呢？理论上来说这两个都需要，因为你不知道谁会挂掉，但是如果第三方使用付费的，相对还是靠谱的，毕竟是商业公司。</p>
 <p><code>自建VPN</code>，买台国外的服务器，顺便做代理。比较好搭建的是PPTP，但是macOS从v12之后就不再支持这种不安全的VPN方案，目前比较适合的是使用SS，目前还没有搭建过，过两天尝试下。BTW，国外的服务器靠谱的还是不少比如DigitalOcean, Linode等等，这又是一篇话题。</p>
@@ -676,7 +681,7 @@ Last Update: 2017-02-04
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#起步"><span class="nav-number">2.1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置篇"><span class="nav-number">2.3.</span> <span class="nav-text">设置篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">2.3.1.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">2.3.2.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码管理-Git"><span class="nav-number">2.3.3.</span> <span class="nav-text">代码管理 - Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">2.3.4.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布"><span class="nav-number">2.3.5.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换主题"><span class="nav-number">2.3.6.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名"><span class="nav-number">2.3.7.</span> <span class="nav-text">域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作篇"><span class="nav-number">2.4.</span> <span class="nav-text">写作篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">2.4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片问题"><span class="nav-number">2.4.2.</span> <span class="nav-text">图片问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常规维护"><span class="nav-number">2.4.3.</span> <span class="nav-text">常规维护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-配置技巧"><span class="nav-number">2.4.4.</span> <span class="nav-text">Hexo 配置技巧</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">3.1.</span> <span class="nav-text">翻墙</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">3.1.1.</span> <span class="nav-text">参考文章</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#起步"><span class="nav-number">1.1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置篇"><span class="nav-number">1.3.</span> <span class="nav-text">设置篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础工具-Oh-My-Zsh-官网"><span class="nav-number">1.3.1.</span> <span class="nav-text">基础工具 - Oh My Zsh 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装系统-Home-brew-官网"><span class="nav-number">1.3.2.</span> <span class="nav-text">安装系统 - Home brew 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码管理-Git"><span class="nav-number">1.3.3.</span> <span class="nav-text">代码管理 - Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#博客构建系统-Hexo-官网"><span class="nav-number">1.3.4.</span> <span class="nav-text">博客构建系统 - Hexo 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布"><span class="nav-number">1.3.5.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换主题"><span class="nav-number">1.3.6.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名"><span class="nav-number">1.3.7.</span> <span class="nav-text">域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作篇"><span class="nav-number">1.4.</span> <span class="nav-text">写作篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown编辑器-MWeb-官网"><span class="nav-number">1.4.1.</span> <span class="nav-text">Markdown编辑器 - MWeb 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片问题"><span class="nav-number">1.4.2.</span> <span class="nav-text">图片问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常规维护"><span class="nav-number">1.4.3.</span> <span class="nav-text">常规维护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-配置技巧"><span class="nav-number">1.4.4.</span> <span class="nav-text">Hexo 配置技巧</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙"><span class="nav-number">2.1.</span> <span class="nav-text">翻墙</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">2.1.1.</span> <span class="nav-text">参考文章</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
