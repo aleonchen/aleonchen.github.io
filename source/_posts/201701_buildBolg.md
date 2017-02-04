@@ -1,14 +1,18 @@
 ---
 title: 小白从零搭建博客系统
 date: 2017-01-18 14:28:54
-tags:
+tags: [hexo, markdown, github]
 ---
+# 摘要
+详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
+>Last Update: 2017-02-04
 
-# 起步
+# 正文 
+## 起步
 搭建自己的博客系统，最终的目的是希望有一个称手的工具，可以便捷的表达自己的想法，成果和生活感悟。为了做到这一点需要很多的前提条件，需要写作、发布、更新、展示等等。在技术层面，需要一台电脑写作，需要写作软件，需要一台服务器，还需要一套管理和发布流程。Word哥，不要紧，本教程就是一步步整理我的整个搭建系统的流程，教小白从头搭建自己的博客系统。
 > PS: 初稿给小白看了下，表示完全看不懂  (⊙ˍ⊙)，看来还有好长的路要走
 
-# 准备工作
+## 准备工作
 首先是要了解整个博客系统能够顺利发布需要那几个步骤，各位看官可以看下下面的流程图。（貌似hexo并不支持flowchat.js)
 
 ```flow
@@ -30,11 +34,11 @@ cond1(no)->op1_1(right)->e
 
 先做个铺垫，基本上这是个程序员的建设历程，如果你觉得打开Terminal(命令行)，看着字符跑来跑去很有趣，那么你可以关闭本文了。本文有点高能，不太适合你，亦或者你是个颜值很高的人，你可以尝试联系我🍹。
 
-# 设置篇
+## 设置篇
 大家觉得搞个bolg不就是去开个账号，然后开写就结束了？咳咳，作为一个动手能力强的程序员，怎么可能选择这么容易的方案？当然是从装脚手架开始，各种系统都要装上尝试下（比如在Markdown里面画流程图），然后打造一个轮子。为了记录，将需要的工具挨个记录和点评，排名不分前后。
 > 因为还没有整理的非常好，这部分会不断的更新。
 
-## 基础工具 - Oh My Zsh [官网](http://ohmyz.sh/)
+### 基础工具 - Oh My Zsh [官网](http://ohmyz.sh/)
 ![zsh](http://macshuo.com/wp-content/uploads/2013/07/zsh1.png)
 大部分工程师从windows迁移过来的一个非常核心的原因就是windows下面没有非常好用的shell。因为web编程的服务端大多都是Linux，极度依赖shell，下面你也将看到，基本上整个系统的搭建也是极度依赖于shell的脚本和各种包管理体系。
 
@@ -46,18 +50,18 @@ Mac自带了Bash等shell环境，但是太弱了，比如高亮这个必备的�
 
 > 需要一些基础的配置，后续在补充
 
-## 安装系统 - Home brew [官网](http://brew.sh/index_zh-cn.html)
+### 安装系统 - Home brew [官网](http://brew.sh/index_zh-cn.html)
 就像windows安装完系统，我的第一件事情就是安装360软件管家（别吐槽，这个货的确方便）就像苹果的App Store一样，有一个信任的软件安装入口和渠道是省了不少事情的。好在Mac下面有很多靠谱的软件安装工具。brew就是方便的软件之一，本身他是用ruby写就的，ruby也是包管理的鼻祖。
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 装完之后，几乎所有的软件都可以用brew来安装，比如`brew cask sublime` 装sublime text软件
 
-## 代码管理 - Git
+### 代码管理 - Git
 整个系统的文档管理都是基于Git的版本管理系统，可以用brew安装
 `brew install git`
 
-## 博客构建系统 - Hexo [官网](https://hexo.io/)
+### 博客构建系统 - Hexo [官网](https://hexo.io/)
 在很早以前blog还是wordpress的天下，很多设计师和程序员靠定制wordpress的模板就可以横行天下。那是世界上最好的语言PHP写就的，不过太复杂，太古老，不是和我们新世纪的程序员。自从最大的男性交友社区Github推出pages服务以来，大家都在上面纷纷搭建系统，显得很酷(其实，主要是托管不要钱)。然后就出现了很多静态博客生成模板，最早期是Jekyll的，包括现在coding在内的很多git服务都有支持这个。但是但是，因为不可告人的原因，我选择了Hexo，而且的确比较好用
 
 Hexo 官网介绍
@@ -87,7 +91,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 
 > Too Young, Too Naive
 
-## 发布
+### 发布
 如果是你土豪，或者说你想自己尝试一下从零搭建一台博客服务器，那么你可以选择自己买台服务器。否则还是推荐用Github的Pages服务。一来，你有地方可以安防自己的博客文章，顺带有版本管理。二来，你也有了免费的博客空间，再搭配Hexo就可以把博客从本地搬到网上了，不过这两年GibHub经常被墙，还是要小心哈。
 注册号Github创建好工程，创建项目仓库，记得在`Setting`里面修改GitHub Pages的相关设置，我这里选择`master branch`
 ![github_pages](media/github_pages.png)
@@ -132,7 +136,7 @@ Run
 
 应该可以看到效果了，访问下你的blog地址看看
 
-## 更换主题
+### 更换主题
 Hexo的好处之一就是容易更换主题，比如
 - [magnetic](https://github.com/klugjo/hexo-theme-magnetic) 
 - [Next](https://github.com/iissnan/hexo-theme-next)
@@ -152,32 +156,31 @@ git clone https://github.com/klugjo/hexo-theme-magnetic themes/magnetic
 theme: magnetic
 ```
 
-## 域名
+### 域名
 首先得有一个自己的域名，各位可以去各大网站申请自己的域名，国内就是阿里云腾讯云，国外推荐Godaddy。在CName中设置域名指向自己的github page 主页，我这里是aleonchen.github.io
-然后在Github Pages -> Custom domain 设置自己的域名`blog.aleonchen.com`
+然后在Github Pages -> Custom domain 设置自己的域名`aleonchen.com`
+> 这里有个坑爹的问题，之前在CName里面设置了'blog.aleonchen.com'，后来忘记了，在setting里面怎么修改都不对。发现只要在source/CName文件里面标记正确"aleonchen.com"就可以了，mark下，以免忘记
 
-# 写作篇
+## 写作篇
 
-## Markdown编辑器 - MWeb [官网](http://zh.mweb.im/index.html)
+### Markdown编辑器 - MWeb [官网](http://zh.mweb.im/index.html)
 Markdown是互联网之子的伟大发明，可以用纯文本的方式管理自己的文档，但是效果比word和pages这些二进制的更加优秀。
 MWeb是国人的独立开发者的作品，赞誉不胜枚举，现在你们看到的这篇文章也是MWeb这个工具写成的，后面关于发布流程的自动化也是基于这个工具。相关的介绍比较多了，少数派上有不少比如：[这里](http://sspai.com/33855)
 
-## 图片问题
+### 图片问题
 在写博客的时候会碰到一个问题，就是当你使用MWeb在本地撰写文章的时候，图片显示都是好的，但是发布到Github就无法显示图片了。仔细看了下其实是图片路径的问题。按照下面两个步骤操作既可以。
 1. 在MWeb引入的时候，只引入`source`目录
 2. 引入的时候设置拖入图片的保存位置为**绝对路径**,见下图(如果已经设置过，可以双击`source`)
 ![source](/media/source-1.png)
 
 
-## 常规维护
-每次写完文章之后按照这个顺序处理下即可
+### 常规维护
+每次写完文章之后输入这个即可
 ```
-hexo clean
-hexo g
-hexo d
+hexo -g d
 ```
 
-## Hexo 配置技巧
+### Hexo 配置技巧
 首页显示文章摘要 [参考链接](http://www.xbool.com/article-not-show-home)
 在next主题的_config.yml文件中，查找auto_excerpt，找到如下部分：
 

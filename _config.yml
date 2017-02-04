@@ -3,17 +3,21 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 胡萝卜手
+title: 成天玩的爹
 subtitle: 
-description: 人往低处走
+description: 记录一个自由职业工程师和俩娃的玩乐人生
 author: aleonchen
 language: zh-Hans
 timezone:
 avatar: /media/avatar.jpg
+
+# Search
 baidu_analytics: cefff7fa6a2b434fd44556718cc36179
+google_site_verification: RaM-nODo2tKXFLvLWATuIswxtO8_bqU79pUUFmxVV3k
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.aleonchen.com
+url: http://aleonchen.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -76,3 +80,16 @@ deploy:
 
 # Comments
 duoshuo_shortname: aleon
+
+# Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml

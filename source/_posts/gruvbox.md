@@ -1,9 +1,12 @@
 ---
 title: 一个高逼格的代码高亮配色gruvbox
 date: 2017-01-24 23:39:08
-tags:
+tags: [gruvbox, pycharm]
 ---
+# 摘要
+一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南
 
+# 正文
 之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）
 ![Pycharm](http://oj8r5ullr.bkt.clouddn.com/20170125.png)
 可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://github.com/morhetz/gruvbox
