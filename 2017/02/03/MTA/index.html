@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="hexo,mta," />
 
 
 
@@ -84,21 +84,24 @@
 
 
 
-<meta name="description" content="缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
-腾讯统计在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用腾讯移动">
+<meta name="description" content="摘要本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程
+正文缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
+腾讯统计在弄数据统计的时候，发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo添加腾讯移动分析(MTA)支持">
 <meta property="og:url" content="http://aleonchen.com/2017/02/03/MTA/index.html">
 <meta property="og:site_name" content="成天玩的爹">
-<meta property="og:description" content="缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
-腾讯统计在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用腾讯移动">
+<meta property="og:description" content="摘要本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程
+正文缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
+腾讯统计在弄数据统计的时候，发">
 <meta property="og:image" content="http://aleonchen.com/media/mta_sum-1.png">
 <meta property="og:image" content="http://aleonchen.com/media/mta_devices-1.png">
-<meta property="og:updated_time" content="2017-02-04T01:32:43.000Z">
+<meta property="og:updated_time" content="2017-02-04T03:16:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo添加腾讯移动分析(MTA)支持">
-<meta name="twitter:description" content="缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
-腾讯统计在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用腾讯移动">
+<meta name="twitter:description" content="摘要本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程
+正文缘起搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了NexT的模板也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的配置指南，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。
+腾讯统计在弄数据统计的时候，发">
 <meta name="twitter:image" content="http://aleonchen.com/media/mta_sum-1.png">
 
 
@@ -237,6 +240,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -388,9 +401,10 @@
       
 
       
-        <h3 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h3><p>搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了<a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT的模板</a>也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置指南</a>，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。</p>
-<h3 id="腾讯统计"><a href="#腾讯统计" class="headerlink" title="腾讯统计"></a>腾讯统计</h3><p>在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用<a href="mta.qq.com">腾讯移动分析</a>，不仅可以支持应用统计、HTML5网页统计甚至还有小程序的统计。支持用户画像、区域和行为分析等。之前项目使用MTA比较熟悉，所以也想自己的Blog可以支持。<br><img src="/media/mta_sum-1.png" alt="mta_su"><br><img src="/media/mta_devices-1.png" alt="mta_devices"></p>
-<h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>稍微研究了下NexT的代码，其实只要修改三个地方就可以了。</p>
+        <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了<a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT的模板</a>也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置指南</a>，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。</p>
+<h2 id="腾讯统计"><a href="#腾讯统计" class="headerlink" title="腾讯统计"></a>腾讯统计</h2><p>在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用<a href="mta.qq.com">腾讯移动分析</a>，不仅可以支持应用统计、HTML5网页统计甚至还有小程序的统计。支持用户画像、区域和行为分析等。之前项目使用MTA比较熟悉，所以也想自己的Blog可以支持。<br><img src="/media/mta_sum-1.png" alt="mta_su"><br><img src="/media/mta_devices-1.png" alt="mta_devices"></p>
+<h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><p>稍微研究了下NexT的代码，其实只要修改三个地方就可以了。</p>
 <p>1.在NexT的<code>_config.yml</code>下面添加一个MTA的设置，MTA只要去创建一个HTML5的应用即可，填入你所申请的<code>App Id</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Tencent MTA ID</div><div class="line">tencent_mta: your app id</div></pre></td></tr></table></figure>
 <p>2.修改<code>analytics.swig</code>文件，添加一个新的js模板，路径为：</p>
@@ -400,7 +414,7 @@
 <p>3.在<code>layout/_scripts/third-party/analytics</code>目录下面添加一个新文件<code>tencent-analytics.swig</code>，内容为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.tencent_mta %&#125;</div><div class="line">&lt;script&gt;</div><div class="line">  	var _mtac = &#123;&#125;;</div><div class="line">  	(function() &#123;</div><div class="line">  		var mta = document.createElement(&quot;script&quot;);</div><div class="line">  		mta.src = &quot;http://pingjs.qq.com/h5/stats.js?v2.0.2&quot;;</div><div class="line">  		mta.setAttribute(&quot;name&quot;, &quot;MTAH5&quot;);</div><div class="line">  		mta.setAttribute(&quot;sid&quot;, &quot;&#123;&#123;theme.tencent_mta&#125;&#125;&quot;);</div><div class="line"></div><div class="line">  		var s = document.getElementsByTagName(&quot;script&quot;)[0];</div><div class="line">  		s.parentNode.insertBefore(mta, s);</div><div class="line">  	&#125;)();</div><div class="line">&lt;/script&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
 <p>最后，在本地<code>hexo server</code>跑起来看了下 mta的代码有没有添加到页面，如果有了，就OK了。</p>
-<h3 id="代码-amp-PR"><a href="#代码-amp-PR" class="headerlink" title="代码 &amp; PR"></a>代码 &amp; PR</h3><p>如果有问题，可以去看代码 <a href="https://github.com/aleonchen/hexo-theme-next" target="_blank" rel="external">https://github.com/aleonchen/hexo-theme-next</a></p>
+<h2 id="代码-amp-PR"><a href="#代码-amp-PR" class="headerlink" title="代码 &amp; PR"></a>代码 &amp; PR</h2><p>如果有问题，可以去看代码 <a href="https://github.com/aleonchen/hexo-theme-next" target="_blank" rel="external">https://github.com/aleonchen/hexo-theme-next</a></p>
 <p>也给作者提交了一个pull request，希望能够添加到官方 😊</p>
 
       
@@ -426,6 +440,8 @@
         <div class="post-tags">
           
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/mta/" rel="tag"># mta</a>
           
         </div>
       
@@ -526,10 +542,10 @@
 
           
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -582,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#腾讯统计"><span class="nav-number">2.</span> <span class="nav-text">腾讯统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改代码"><span class="nav-number">3.</span> <span class="nav-text">修改代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-amp-PR"><span class="nav-number">4.</span> <span class="nav-text">代码 & PR</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘起"><span class="nav-number">2.1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#腾讯统计"><span class="nav-number">2.2.</span> <span class="nav-text">腾讯统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码"><span class="nav-number">2.3.</span> <span class="nav-text">修改代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-amp-PR"><span class="nav-number">2.4.</span> <span class="nav-text">代码 & PR</span></a></li></ol></li></ol></div>
             
 
           </div>

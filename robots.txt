@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://www.jeyzhang.com/sitemap.xml
-Sitemap: http://www.jeyzhang.com/baidusitemap.xml
+Sitemap: http://aleonchen.com/sitemap.xml
+Sitemap: http://aleonchen.com/baidusitemap.xml

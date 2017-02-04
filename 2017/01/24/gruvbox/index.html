@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="aleonchen" />
+  <meta name="keywords" content="pycharm,gruvbox," />
 
 
 
@@ -84,18 +84,21 @@
 
 
 
-<meta name="description" content="之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://github.com/morhetz/gruvbox)看到这个配色,眼睛一亮，好看。本来只是想搞定Pycharm就">
+<meta name="description" content="摘要一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南
+正文之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://githu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个高逼格的代码高亮配色gruvbox">
 <meta property="og:url" content="http://aleonchen.com/2017/01/24/gruvbox/index.html">
 <meta property="og:site_name" content="成天玩的爹">
-<meta property="og:description" content="之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://github.com/morhetz/gruvbox)看到这个配色,眼睛一亮，好看。本来只是想搞定Pycharm就">
+<meta property="og:description" content="摘要一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南
+正文之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://githu">
 <meta property="og:image" content="http://oj8r5ullr.bkt.clouddn.com/20170125.png">
 <meta property="og:image" content="http://oj8r5ullr.bkt.clouddn.com/14852726955113.jpg">
-<meta property="og:updated_time" content="2017-01-24T16:27:12.000Z">
+<meta property="og:updated_time" content="2017-02-04T03:16:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个高逼格的代码高亮配色gruvbox">
-<meta name="twitter:description" content="之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://github.com/morhetz/gruvbox)看到这个配色,眼睛一亮，好看。本来只是想搞定Pycharm就">
+<meta name="twitter:description" content="摘要一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南
+正文之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 https://githu">
 <meta name="twitter:image" content="http://oj8r5ullr.bkt.clouddn.com/20170125.png">
 
 
@@ -234,6 +237,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -385,7 +398,8 @@
       
 
       
-        <p>之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）<br><img src="http://oj8r5ullr.bkt.clouddn.com/20170125.png" alt="Pycharm"><br>可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 <a href="https://github.com/morhetz/gruvbox" target="_blank" rel="external">https://github.com/morhetz/gruvbox</a><br><img src="http://oj8r5ullr.bkt.clouddn.com/14852726955113.jpg" alt="官方截图"><br>)<br>看到这个配色,眼睛一亮，好看。本来只是想搞定Pycharm就算了，谁曾想居然这个是Vim的主题，顺便也搞定了，然后看了下Sublime也有Package顺便一起搞定了。</p>
+        <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>之前被Asaka安利PyCharm无数回，今天心血来潮折腾PyCharm的配色，先是找来了Materail Theme (话说Sublime下面这绝对是个好配色）<br><img src="http://oj8r5ullr.bkt.clouddn.com/20170125.png" alt="Pycharm"><br>可是怎么弄都不太满意，于是找Asaka问了下PyCharm有没有好的代码高亮配色，他旋即扔了一个URL给我 <a href="https://github.com/morhetz/gruvbox" target="_blank" rel="external">https://github.com/morhetz/gruvbox</a><br><img src="http://oj8r5ullr.bkt.clouddn.com/14852726955113.jpg" alt="官方截图"><br>)<br>看到这个配色,眼睛一亮，好看。本来只是想搞定Pycharm就算了，谁曾想居然这个是Vim的主题，顺便也搞定了，然后看了下Sublime也有Package顺便一起搞定了。</p>
 <ul>
 <li>PyCharm 包括JetBrains其他的用这个即可<br><a href="https://github.com/caleb/gruvbox-idea" target="_blank" rel="external">https://github.com/caleb/gruvbox-idea</a></li>
 <li>Sublime 直接在Package Control里面搜gruvbox</li>
@@ -416,6 +430,14 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/pycharm/" rel="tag"># pycharm</a>
+          
+            <a href="/tags/gruvbox/" rel="tag"># gruvbox</a>
+          
+        </div>
       
 
       
@@ -485,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/media/avatar.jpg"
@@ -509,10 +540,10 @@
 
           
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -555,6 +586,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
