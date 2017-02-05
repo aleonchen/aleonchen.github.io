@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[macOS(osx)更改docker image镜像下载目录]]></title>
       <url>%2F2017%2F02%2F05%2Fdocker-mac%2F</url>
-      <content type="text"><![CDATA[Docker是一个比较有趣的应用，可以用来代替虚拟机VM，诸多好处。 默认的macOS的Docker安装目录是在系统盘下面的文件里面1~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2 linux可以设置其他的目录，macOS暂时没有看到官方有提供办法更改，但是macOS有个很好的功能就是做软连接，咱们可以将数据复制到其他目录otherPath，然后做link即可 123mv ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/ /otherPath/com.docker.driver.amd64-linuxln -s /otherPath/com.docker.driver.amd64-linux /Users/&lt;username&gt;/Library/Containers/com.docker.docker/Data 哈哈，看看大功告成]]></content>
+      <content type="text"><![CDATA[摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。 Docker是一个比较有趣的应用，可以用来代替虚拟机VM，诸多好处。 默认的macOS的Docker安装目录是在系统盘下面的文件里面1~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2 linux可以设置其他的目录，macOS暂时没有看到官方有提供办法更改，但是macOS有个很好的功能就是做软连接，咱们可以将数据复制到其他目录otherPath，然后做link即可 123mv ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/ /otherPath/com.docker.driver.amd64-linuxln -s /otherPath/com.docker.driver.amd64-linux /Users/&lt;username&gt;/Library/Containers/com.docker.docker/Data 哈哈，看看大功告成]]></content>
     </entry>
 
     
