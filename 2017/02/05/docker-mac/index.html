@@ -88,14 +88,14 @@
 
 <meta name="description" content="摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS(osx)更改docker image镜像下载目录">
+<meta property="og:title" content="更改 macOS(osx) Docker image下载路径">
 <meta property="og:url" content="http://aleonchen.com/2017/02/05/docker-mac/index.html">
 <meta property="og:site_name" content="纸尿裤工程师">
 <meta property="og:description" content="摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。">
 <meta property="og:image" content="http://aleonchen.com/media/docker_vm.png">
-<meta property="og:updated_time" content="2017-02-05T10:27:16.000Z">
+<meta property="og:updated_time" content="2017-02-05T10:30:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="macOS(osx)更改docker image镜像下载目录">
+<meta name="twitter:title" content="更改 macOS(osx) Docker image下载路径">
 <meta name="twitter:description" content="摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。">
 <meta name="twitter:image" content="http://aleonchen.com/media/docker_vm.png">
 
@@ -131,7 +131,7 @@
 
 
 
-  <title> macOS(osx)更改docker image镜像下载目录 | 纸尿裤工程师 </title>
+  <title> 更改 macOS(osx) Docker image下载路径 | 纸尿裤工程师 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -324,7 +324,7 @@
             
             
               
-                macOS(osx)更改docker image镜像下载目录
+                更改 macOS(osx) Docker image下载路径
               
             
           </h1>
@@ -369,7 +369,7 @@
 
           
           
-             <span id="/2017/02/05/docker-mac/" class="leancloud_visitors" data-flag-title="macOS(osx)更改docker image镜像下载目录">
+             <span id="/2017/02/05/docker-mac/" class="leancloud_visitors" data-flag-title="更改 macOS(osx) Docker image下载路径">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -400,10 +400,13 @@
 <a id="more"></a>
 <p>Docker是一个比较有趣的应用，可以用来代替虚拟机VM，诸多好处。</p>
 <ul>
-<li><img src="/media/docker_vm.png" alt="docker_v"></li>
+<li>比虚拟机性能好</li>
+<li>占用空间少</li>
+<li>可以统一开发环境和生产环境，便于维护<br><img src="/media/docker_vm.png" alt="docker_v"></li>
 </ul>
-<h1 id="默认的macOS的Docker安装目录是在系统盘下面的文件里面"><a href="#默认的macOS的Docker安装目录是在系统盘下面的文件里面" class="headerlink" title="默认的macOS的Docker安装目录是在系统盘下面的文件里面"></a>默认的macOS的Docker安装目录是在系统盘下面的文件里面</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2</div></pre></td></tr></table></figure>
-<p>linux可以设置其他的目录，macOS暂时没有看到官方有提供办法更改，但是macOS有个很好的功能就是做软连接，咱们可以将数据复制到其他目录<code>otherPath</code>，然后做link即可</p>
+<p>但是默认的macOS的Docker安装目录是在系统盘下面的文件里面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2</div></pre></td></tr></table></figure>
+<p>MBP那点可怜的空间很快就塞满了，Linux可以设置其他的目录，macOS暂时没有看到官方有提供办法更改，但是macOS有个很好的功能就是做软连接，咱们可以将数据复制到其他目录<code>otherPath</code>，然后做link即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mv ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/ /otherPath/com.docker.driver.amd64-linux</div><div class="line"></div><div class="line">ln -s /otherPath/com.docker.driver.amd64-linux /Users/&lt;username&gt;/Library/Containers/com.docker.docker/Data</div></pre></td></tr></table></figure>
 <p>哈哈，看看大功告成</p>
 
@@ -475,7 +478,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/05/docker-mac/"
-           data-title="macOS(osx)更改docker image镜像下载目录" data-url="http://aleonchen.com/2017/02/05/docker-mac/">
+           data-title="更改 macOS(osx) Docker image下载路径" data-url="http://aleonchen.com/2017/02/05/docker-mac/">
       </div>
     
   </div>
@@ -499,17 +502,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/media/avatar.jpg"
@@ -578,22 +572,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#默认的macOS的Docker安装目录是在系统盘下面的文件里面"><span class="nav-number">1.</span> <span class="nav-text">默认的macOS的Docker安装目录是在系统盘下面的文件里面</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
