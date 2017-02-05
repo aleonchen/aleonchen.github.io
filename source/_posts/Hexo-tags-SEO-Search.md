@@ -1,11 +1,12 @@
 ---
-title: 让博客被Google搜索 Hexo配置/全站搜索/Tags/SEO
+title: 让博客被Google搜索-Hexo/全站搜索/Tags/SEO
 date: 2017-02-04 11:30:04
 tags: [hexo, local searche, tags, google, SEO]
 ---
 
-# 摘要
-本文介绍了如何在Hexo博客配置全站搜索，创建tags页面和搜索引擎Google SEO。
+摘要：本文介绍了如何在Hexo博客配置全站搜索，创建tags页面和搜索引擎Google SEO。
+
+<!-- more -->
 
 # 正文
 创建好了Hexo装修简直是停不下来的节奏，一方面是既然做了Blog就像把他弄好，另一方，其实在做网站运营方面一直有很多方法没有机会尝试，这次有时间，有机会一定要按照自己的想法尝试一下。首先站内的文章希望有个比较好的结构，可以作为自己的知识储备，那么全站搜索必须做，其次作为运营要让博客能够被找到，SEO必须得做。接下来就是整个过程啦。
@@ -78,7 +79,7 @@ tags: [hexo, mta]
 ```
 
 ## 搜索 Search
-道理上还是Google做排名更加靠谱一些，百度做排名那是简直了。
+道理上还是Google做排名更加靠谱一些，百度做排名那是简直了，而且Github屏蔽了百度的爬虫，这个暂时还没解决。
 
 ### 首页title优化
 
@@ -153,7 +154,7 @@ Sitemap: http://aleonchen.com/baidusitemap.xml
 请自行将`aleonchen.com`改成自己的域名,然后`hexo d -g`提交一下
 
 ### 配置Google站点管理工具（Google Webmaster tools）
-设置 Google站点管理工具 的验证字符串，用于提交 sitemap
+设置 [Google站点管理工具](https://www.google.com/webmasters) 的验证字符串，用于提交 sitemap
 1. 获取 google site verification code
 ![google_site_verification](/media/google_site_verification.jpg)
 

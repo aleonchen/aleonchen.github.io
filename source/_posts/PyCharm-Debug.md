@@ -3,8 +3,10 @@ title: PyCharm调试LeanCloud设置
 date: 2017-01-28 21:53:51
 tags: [pycharm, leancloud, debug]
 ---
-# 摘要
-为LeanCloud开发者提供了在Pycharm下调试Python程序的一个解决办法
+
+摘要：本文为LeanCloud开发者提供了在Pycharm下调试Python程序的一个解决办法
+
+<!-- more -->
 
 # 正文
 ## 设置Pycharm

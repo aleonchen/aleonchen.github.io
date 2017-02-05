@@ -3,8 +3,10 @@ title: Hexo添加腾讯移动分析(MTA)支持
 date: 2017-02-03 20:26:37
 tags: [hexo, mta]
 ---
-# 摘要
-本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程
+
+摘要：本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程
+
+<!-- more -->
 
 # 正文
 ## 缘起
