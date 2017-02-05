@@ -1,5 +1,5 @@
 ---
-title: 更改 macOS(osx) Docker image下载路径
+title: MacOS Docker images保存路径更改
 date: 2017-02-05 18:14:51
 tags: [docker, macOS]
 ---
