@@ -4,14 +4,35 @@
 
     
   <url>
+    <loc>http://aleonchen.com/2017/02/06/vim/</loc>
+    <lastmod>2017-02-06T09:32:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu的Vim支持Nginx的语法高亮</title>
+        <pubTime>2017-02-06T08:57:01.000Z</pubTime>
+        
+        <tag>gruvbox</tag>
+         
+        <tag>vim</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aleonchen.com/2017/02/05/docker-mac/</loc>
-    <lastmod>2017-02-06T02:15:10.000Z</lastmod>
+    <lastmod>2017-02-06T07:26:24.000Z</lastmod>
     <data>
         <display>
         <title>MacOS Docker images保存路径更改</title>
         <pubTime>2017-02-05T10:14:51.000Z</pubTime>
         
-        <tag>docker</tag>
+        <tag>Docker</tag>
          
         <tag>macOS</tag>
          
@@ -24,15 +45,13 @@
     
   <url>
     <loc>http://aleonchen.com/2017/02/04/Hexo-tags-SEO-Search/</loc>
-    <lastmod>2017-02-06T02:14:07.000Z</lastmod>
+    <lastmod>2017-02-06T07:26:03.000Z</lastmod>
     <data>
         <display>
         <title>让博客被Google搜索-Hexo/全站搜索/Tags/SEO</title>
         <pubTime>2017-02-04T03:30:04.000Z</pubTime>
         
         <tag>hexo</tag>
-         
-        <tag>google</tag>
          
         <tag>SEO</tag>
          
@@ -44,18 +63,39 @@
 
     
   <url>
+    <loc>http://aleonchen.com/2017/01/28/PyCharm-Debug/</loc>
+    <lastmod>2017-02-06T07:25:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>PyCharm调试LeanCloud设置</title>
+        <pubTime>2017-01-28T13:53:51.000Z</pubTime>
+        
+        <tag>pycharm</tag>
+         
+        <tag>leancloud</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aleonchen.com/2017/01/24/gruvbox/</loc>
-    <lastmod>2017-02-06T02:13:48.000Z</lastmod>
+    <lastmod>2017-02-06T07:13:00.000Z</lastmod>
     <data>
         <display>
         <title>一个高逼格的代码高亮配色gruvbox</title>
         <pubTime>2017-01-24T15:39:08.000Z</pubTime>
         
-        <tag>gruvbox</tag>
-         
         <tag>pycharm</tag>
          
         <tag>leancloud</tag>
+         
+        <tag>gruvbox</tag>
          
          
            
@@ -75,27 +115,6 @@
         <tag>hexo</tag>
          
         <tag>github</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aleonchen.com/2017/01/28/PyCharm-Debug/</loc>
-    <lastmod>2017-02-06T01:39:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>PyCharm调试LeanCloud设置</title>
-        <pubTime>2017-01-28T13:53:51.000Z</pubTime>
-        
-        <tag>pycharm</tag>
-         
-        <tag>leancloud</tag>
-         
-        <tag>debug</tag>
          
          
            
