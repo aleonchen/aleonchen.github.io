@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://aleonchen.com/2017/01/24/gruvbox/</loc>
+    <lastmod>2017-02-06T02:10:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>一个高逼格的代码高亮配色gruvbox</title>
+        <pubTime>2017-01-24T15:39:08.000Z</pubTime>
+        
+        <tag>gruvbox</tag>
+         
+        <tag>pycharm</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aleonchen.com/2017/01/18/201701_buildBolg/</loc>
     <lastmod>2017-02-06T01:58:43.000Z</lastmod>
     <data>
@@ -100,25 +119,6 @@
         <tag>docker</tag>
          
         <tag>macOS</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aleonchen.com/2017/01/24/gruvbox/</loc>
-    <lastmod>2017-02-04T04:47:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>一个高逼格的代码高亮配色gruvbox</title>
-        <pubTime>2017-01-24T15:39:08.000Z</pubTime>
-        
-        <tag>gruvbox</tag>
-         
-        <tag>pycharm</tag>
          
          
            
