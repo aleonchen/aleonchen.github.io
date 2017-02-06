@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>纸尿裤工程师</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://aleonchen.com/"/>
+  <updated>2017-02-06T09:35:40.000Z</updated>
+  <id>http://aleonchen.com/</id>
+  
+  <author>
+    <name>aleonchen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vim支持Nginx的语法高亮 - Ubuntu</title>
+    <link href="http://aleonchen.com/2017/02/06/vim/"/>
+    <id>http://aleonchen.com/2017/02/06/vim/</id>
+    <published>2017-02-06T08:57:01.000Z</published>
+    <updated>2017-02-06T09:35:40.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：vim越用越爽，nginx是经常要修改的文件，怎么能没有高亮呢？本文结合之前的gruvbox的主题，简单完成设置&lt;br&gt;&lt;img src=&quot;/media/nginx_highlight.png&quot; alt=&quot;nginx_highlight&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="gruvbox" scheme="http://aleonchen.com/tags/gruvbox/"/>
+    
+      <category term="vim" scheme="http://aleonchen.com/tags/vim/"/>
+    
+      <category term="nginx" scheme="http://aleonchen.com/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacOS Docker images保存路径更改</title>
+    <link href="http://aleonchen.com/2017/02/05/docker-mac/"/>
+    <id>http://aleonchen.com/2017/02/05/docker-mac/</id>
+    <published>2017-02-05T10:14:51.000Z</published>
+    <updated>2017-02-06T07:26:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。&lt;br&gt;&lt;img src=&quot;/media/docker-app-drag.png&quot; alt=&quot;docker-app-drag&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://aleonchen.com/tags/Docker/"/>
+    
+      <category term="macOS" scheme="http://aleonchen.com/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让博客被Google搜索-Hexo/全站搜索/Tags/SEO</title>
+    <link href="http://aleonchen.com/2017/02/04/Hexo-tags-SEO-Search/"/>
+    <id>http://aleonchen.com/2017/02/04/Hexo-tags-SEO-Search/</id>
+    <published>2017-02-04T03:30:04.000Z</published>
+    <updated>2017-02-06T07:26:03.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：本文介绍了如何在Hexo博客配置全站搜索，创建tags页面和搜索引擎Google SEO。&lt;br&gt;&lt;img src=&quot;/media/google_search.png&quot; alt=&quot;google_search&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://aleonchen.com/tags/hexo/"/>
+    
+      <category term="SEO" scheme="http://aleonchen.com/tags/SEO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo添加腾讯移动分析(MTA)支持</title>
+    <link href="http://aleonchen.com/2017/02/03/MTA/"/>
+    <id>http://aleonchen.com/2017/02/03/MTA/</id>
+    <published>2017-02-03T12:26:37.000Z</published>
+    <updated>2017-02-06T01:28:06.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程&lt;br&gt;&lt;img src=&quot;/media/mta_sum-1.png&quot; alt=&quot;mta_su&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://aleonchen.com/tags/hexo/"/>
+    
+      <category term="mta" scheme="http://aleonchen.com/tags/mta/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyCharm调试LeanCloud设置</title>
+    <link href="http://aleonchen.com/2017/01/28/PyCharm-Debug/"/>
+    <id>http://aleonchen.com/2017/01/28/PyCharm-Debug/</id>
+    <published>2017-01-28T13:53:51.000Z</published>
+    <updated>2017-02-06T07:25:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：本文为LeanCloud开发者提供了在Pycharm下调试Python程序的一个解决办法&lt;br&gt;&lt;img src=&quot;/media/leancloud_pycharm.jpg&quot; alt=&quot;leancloud_pychar&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="pycharm" scheme="http://aleonchen.com/tags/pycharm/"/>
+    
+      <category term="leancloud" scheme="http://aleonchen.com/tags/leancloud/"/>
+    
+      <category term="python" scheme="http://aleonchen.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个高逼格的代码高亮配色gruvbox</title>
+    <link href="http://aleonchen.com/2017/01/24/gruvbox/"/>
+    <id>http://aleonchen.com/2017/01/24/gruvbox/</id>
+    <published>2017-01-24T15:39:08.000Z</published>
+    <updated>2017-02-06T07:13:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：一个优秀的代码高亮的主题（gruvbox）在SubLime PyCharm Vim中的配置指南&lt;br&gt;&lt;img src=&quot;/media/gruvbox.jpg&quot; alt=&quot;gruvbox&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="pycharm" scheme="http://aleonchen.com/tags/pycharm/"/>
+    
+      <category term="leancloud" scheme="http://aleonchen.com/tags/leancloud/"/>
+    
+      <category term="gruvbox" scheme="http://aleonchen.com/tags/gruvbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白从零搭建博客系统</title>
+    <link href="http://aleonchen.com/2017/01/18/201701_buildBolg/"/>
+    <id>http://aleonchen.com/2017/01/18/201701_buildBolg/</id>
+    <published>2017-01-18T06:28:54.000Z</published>
+    <updated>2017-02-06T02:13:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。&lt;br&gt;&lt;img src=&quot;/media/aleonchen_blog.jpg&quot; alt=&quot;aleonchen_blog&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://aleonchen.com/tags/hexo/"/>
+    
+      <category term="github" scheme="http://aleonchen.com/tags/github/"/>
+    
+  </entry>
+  
+</feed>
