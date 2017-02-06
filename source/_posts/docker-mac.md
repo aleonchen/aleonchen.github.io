@@ -1,7 +1,7 @@
 ---
 title: MacOS Docker images保存路径更改
 date: 2017-02-05 18:14:51
-tags: [docker, macOS]
+tags: [Docker, macOS]
 ---
 
 摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。

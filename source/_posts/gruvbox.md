@@ -25,7 +25,7 @@ https://github.com/caleb/gruvbox-idea
 `.vimrc` 文件里面设置 
 
 ```
-Plugin 'morhetz/gruvbox
+Plugin 'morhetz/gruvbox'
 ```
 然后`:PluginInstall` 搞定，在设置
 

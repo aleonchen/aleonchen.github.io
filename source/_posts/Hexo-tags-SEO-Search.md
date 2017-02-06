@@ -1,7 +1,7 @@
 ---
 title: 让博客被Google搜索-Hexo/全站搜索/Tags/SEO
 date: 2017-02-04 11:30:04
-tags: [hexo, google, SEO]
+tags: [hexo, SEO]
 ---
 
 摘要：本文介绍了如何在Hexo博客配置全站搜索，创建tags页面和搜索引擎Google SEO。
