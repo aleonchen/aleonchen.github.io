@@ -5,6 +5,7 @@ tags: [docker, macOS]
 ---
 
 摘要：Docker的镜像比较占用空间，在Linux系统下面是可以修改下载目录的。但是macOS一直没有给出修改办法，本文介绍了一种方法。
+![docker-app-drag](/media/docker-app-drag.png)
 
 <!-- more -->
 

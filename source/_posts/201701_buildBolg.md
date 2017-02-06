@@ -1,11 +1,11 @@
 ---
 title: 小白从零搭建博客系统
 date: 2017-01-18 14:28:54
-tags: [hexo, markdown, github]
+tags: [hexo, github]
 ---
 
 摘要：本文详细介绍了用Hexo从头免费搭建一个个人博客的教程，包含了macOS的工具准备，Markdown的撰写等等，博主会持续更新。
->Last Update: 2017-02-04
+![aleonchen_blog](/media/aleonchen_blog.jpg)
 
 <!-- more -->
 

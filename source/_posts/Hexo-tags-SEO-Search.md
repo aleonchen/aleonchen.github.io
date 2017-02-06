@@ -1,10 +1,11 @@
 ---
 title: 让博客被Google搜索-Hexo/全站搜索/Tags/SEO
 date: 2017-02-04 11:30:04
-tags: [hexo, local searche, tags, google, SEO]
+tags: [hexo, google, SEO]
 ---
 
 摘要：本文介绍了如何在Hexo博客配置全站搜索，创建tags页面和搜索引擎Google SEO。
+![google_search](/media/google_search.png)
 
 <!-- more -->
 
@@ -173,7 +174,8 @@ google_site_verification: XXXXXXXXXXXXXXXXXXXXXXX
 >关键是配置Google抓取工具，在这里我们填上我们需要抓取的url,不填这表示抓取首页，抓取方式可以选择桌面，智能手机等等，自行根据需要选择。填好url之后，点击抓取。提交完成后，提交至索引，根据提示操作就可以了，见图
 ![google_search_console](/media/google_search_console.jpg)
 这个时候再去Google搜索，不上首页都难吧
-![google_result](/media/google_result.png)
+![google_search](/media/google_search.png)
+
 
 # 参考
 参考了这篇文章，感谢作者
