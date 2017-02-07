@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aleonchen.com/"/>
-  <updated>2017-02-06T09:35:40.000Z</updated>
+  <updated>2017-02-07T14:35:36.000Z</updated>
   <id>http://aleonchen.com/</id>
   
   <author>
@@ -16,11 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vim支持Nginx的语法高亮 - Ubuntu</title>
+    <title>腾讯云安装docker服务及镜像加速配置 - Ubuntu</title>
+    <link href="http://aleonchen.com/2017/02/07/qcloud-docker/"/>
+    <id>http://aleonchen.com/2017/02/07/qcloud-docker/</id>
+    <published>2017-02-07T02:00:35.000Z</published>
+    <updated>2017-02-07T14:35:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要: docker为应用部署、应用持续集成提供非常巨大的遍历性，提升了效率，同时为架构的横向扩张提供了非常好的基础。本文介绍了如何在腾讯云的服务器上自行搭建一个docker服务&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="腾讯云" scheme="http://aleonchen.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    
+      <category term="docker" scheme="http://aleonchen.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让Vim支持Nginx语法高亮 - Ubuntu</title>
     <link href="http://aleonchen.com/2017/02/06/vim/"/>
     <id>http://aleonchen.com/2017/02/06/vim/</id>
     <published>2017-02-06T08:57:01.000Z</published>
-    <updated>2017-02-06T09:35:40.000Z</updated>
+    <updated>2017-02-07T02:28:45.000Z</updated>
     
     <summary type="html">
     
@@ -146,7 +166,7 @@
     <link href="http://aleonchen.com/2017/01/18/201701_buildBolg/"/>
     <id>http://aleonchen.com/2017/01/18/201701_buildBolg/</id>
     <published>2017-01-18T06:28:54.000Z</published>
-    <updated>2017-02-06T02:13:32.000Z</updated>
+    <updated>2017-02-07T01:15:05.000Z</updated>
     
     <summary type="html">
     

@@ -90,15 +90,15 @@
 
 <meta name="description" content="摘要：vim越用越爽，nginx是经常要修改的文件，怎么能没有高亮呢？本文结合之前的gruvbox的主题，简单完成设置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim支持Nginx的语法高亮 - Ubuntu">
+<meta property="og:title" content="让Vim支持Nginx语法高亮 - Ubuntu">
 <meta property="og:url" content="http://aleonchen.com/2017/02/06/vim/index.html">
 <meta property="og:site_name" content="纸尿裤工程师">
 <meta property="og:description" content="摘要：vim越用越爽，nginx是经常要修改的文件，怎么能没有高亮呢？本文结合之前的gruvbox的主题，简单完成设置">
 <meta property="og:image" content="http://aleonchen.com/media/nginx_highlight.png">
 <meta property="og:image" content="http://aleonchen.com/media/nginx_highlight.png">
-<meta property="og:updated_time" content="2017-02-06T09:35:40.000Z">
+<meta property="og:updated_time" content="2017-02-07T02:28:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vim支持Nginx的语法高亮 - Ubuntu">
+<meta name="twitter:title" content="让Vim支持Nginx语法高亮 - Ubuntu">
 <meta name="twitter:description" content="摘要：vim越用越爽，nginx是经常要修改的文件，怎么能没有高亮呢？本文结合之前的gruvbox的主题，简单完成设置">
 <meta name="twitter:image" content="http://aleonchen.com/media/nginx_highlight.png">
 
@@ -134,7 +134,7 @@
 
 
 
-  <title> Vim支持Nginx的语法高亮 - Ubuntu | 纸尿裤工程师 </title>
+  <title> 让Vim支持Nginx语法高亮 - Ubuntu | 纸尿裤工程师 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -327,7 +327,7 @@
             
             
               
-                Vim支持Nginx的语法高亮 - Ubuntu
+                让Vim支持Nginx语法高亮 - Ubuntu
               
             
           </h1>
@@ -372,7 +372,7 @@
 
           
           
-             <span id="/2017/02/06/vim/" class="leancloud_visitors" data-flag-title="Vim支持Nginx的语法高亮 - Ubuntu">
+             <span id="/2017/02/06/vim/" class="leancloud_visitors" data-flag-title="让Vim支持Nginx语法高亮 - Ubuntu">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -405,8 +405,10 @@
 <h1 id="安装vundle"><a href="#安装vundle" class="headerlink" title="安装vundle"></a>安装vundle</h1><p>vundle是vim的一个插件管理工具，非常方便安装其他的plugin. <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">官网</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</div></pre></td></tr></table></figure>
 <p>编辑<code>vim ~/.vimrc</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">set nocompatible              &quot; be iMproved, required</div><div class="line">filetype off                  &quot; required</div><div class="line"></div><div class="line">syntax on</div><div class="line"></div><div class="line">&quot; set the runtime path to include Vundle and initialize</div><div class="line">set rtp+=~/.vim/bundle/Vundle.vim</div><div class="line">call vundle#begin()</div><div class="line">&quot; alternatively, pass a path where Vundle should install plugins</div><div class="line">&quot;call vundle#begin(&apos;~/some/path/here&apos;)</div><div class="line"></div><div class="line">&quot; let Vundle manage Vundle, required</div><div class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</div><div class="line"></div><div class="line">&quot; The following are examples of different formats supported.</div><div class="line">&quot; Keep Plugin commands between vundle#begin/end.</div><div class="line">&quot; plugin on GitHub repo</div><div class="line">Plugin &apos;tpope/vim-fugitive&apos;</div><div class="line">&quot; plugin from http://vim-scripts.org/vim/scripts.html</div><div class="line">&quot; Plugin &apos;L9&apos;</div><div class="line">&quot; Git plugin not hosted on GitHub</div><div class="line">Plugin &apos;git://git.wincent.com/command-t.git&apos;</div><div class="line">&quot; git repos on your local machine (i.e. when working on your own plugin)</div><div class="line">&quot; Plugin &apos;file:///home/gmarik/path/to/plugin&apos;</div><div class="line">&quot; The sparkup vim script is in a subdirectory of this repo called vim.</div><div class="line">&quot; Pass the path to set the runtimepath properly.</div><div class="line">Plugin &apos;rstacruz/sparkup&apos;, &#123;&apos;rtp&apos;: &apos;vim/&apos;&#125;</div><div class="line">&quot; Install L9 and avoid a Naming conflict if you&apos;ve already installed a</div><div class="line">&quot; different version somewhere else.</div><div class="line">Plugin &apos;ascenator/L9&apos;, &#123;&apos;name&apos;: &apos;newL9&apos;&#125;</div><div class="line"></div><div class="line">Plugin &apos;morhetz/gruvbox&apos;</div><div class="line">Plugin &apos;vim-airline/vim-airline&apos;</div><div class="line">Plugin &apos;vim-airline/vim-airline-themes&apos;</div><div class="line"></div><div class="line">&quot; All of your Plugins must be added before the following line</div><div class="line">call vundle#end()            &quot; required</div><div class="line">filetype plugin indent on    &quot; required</div><div class="line">&quot; To ignore plugin indent changes, instead use:</div><div class="line">&quot;filetype plugin on</div><div class="line">&quot;</div><div class="line">&quot; Brief help</div><div class="line">&quot; :PluginList       - lists configured plugins</div><div class="line">&quot; :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</div><div class="line">&quot; :PluginSearch foo - searches for foo; append `!` to refresh local cache</div><div class="line">&quot; :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</div><div class="line">&quot;</div><div class="line">&quot; see :h vundle for more details or wiki for FAQ</div><div class="line">&quot; Put your non-Plugin stuff after this line</div><div class="line"></div><div class="line">colorscheme gruvbox</div><div class="line">set background=dark    &quot; Setting dark mode</div><div class="line">let g:gruvbox_contrast_dark=&apos;hard&apos;</div><div class="line">let g:airline_theme=&apos;simple&apos;</div></pre></td></tr></table></figure>
-<p>保存之后，再次打开vim 输入 <code>:PluginInstall</code>，再打开看看。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">set nocompatible              &quot; be iMproved, required</div><div class="line">filetype off                  &quot; required</div><div class="line"></div><div class="line">syntax on</div><div class="line"></div><div class="line">&quot; set the runtime path to include Vundle and initialize</div><div class="line">set rtp+=~/.vim/bundle/Vundle.vim</div><div class="line">call vundle#begin()</div><div class="line">&quot; alternatively, pass a path where Vundle should install plugins</div><div class="line">&quot;call vundle#begin(&apos;~/some/path/here&apos;)</div><div class="line"></div><div class="line">&quot; let Vundle manage Vundle, required</div><div class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</div><div class="line"></div><div class="line">&quot; The following are examples of different formats supported.</div><div class="line">&quot; Keep Plugin commands between vundle#begin/end.</div><div class="line">&quot; plugin on GitHub repo</div><div class="line">Plugin &apos;tpope/vim-fugitive&apos;</div><div class="line">&quot; plugin from http://vim-scripts.org/vim/scripts.html</div><div class="line">&quot; Plugin &apos;L9&apos;</div><div class="line">&quot; Git plugin not hosted on GitHub</div><div class="line">Plugin &apos;git://git.wincent.com/command-t.git&apos;</div><div class="line">&quot; git repos on your local machine (i.e. when working on your own plugin)</div><div class="line">&quot; Plugin &apos;file:///home/gmarik/path/to/plugin&apos;</div><div class="line">&quot; The sparkup vim script is in a subdirectory of this repo called vim.</div><div class="line">&quot; Pass the path to set the runtimepath properly.</div><div class="line">Plugin &apos;rstacruz/sparkup&apos;, &#123;&apos;rtp&apos;: &apos;vim/&apos;&#125;</div><div class="line">&quot; Install L9 and avoid a Naming conflict if you&apos;ve already installed a</div><div class="line">&quot; different version somewhere else.</div><div class="line">Plugin &apos;ascenator/L9&apos;, &#123;&apos;name&apos;: &apos;newL9&apos;&#125;</div><div class="line"></div><div class="line">Plugin &apos;morhetz/gruvbox&apos;</div><div class="line">Plugin &apos;vim-airline/vim-airline&apos;</div><div class="line">Plugin &apos;vim-airline/vim-airline-themes&apos;</div><div class="line"></div><div class="line">&quot; All of your Plugins must be added before the following line</div><div class="line">call vundle#end()            &quot; required</div><div class="line">filetype plugin indent on    &quot; required</div><div class="line">&quot; To ignore plugin indent changes, instead use:</div><div class="line">&quot;filetype plugin on</div><div class="line">&quot;</div><div class="line">&quot; Brief help</div><div class="line">&quot; :PluginList       - lists configured plugins</div><div class="line">&quot; :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</div><div class="line">&quot; :PluginSearch foo - searches for foo; append `!` to refresh local cache</div><div class="line">&quot; :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</div><div class="line">&quot;</div><div class="line">&quot; see :h vundle for more details or wiki for FAQ</div><div class="line">&quot; Put your non-Plugin stuff after this line</div></pre></td></tr></table></figure>
+<p>保存之后，再次打开vim 输入 <code>:PluginInstall</code>，所有插件装完之后，再次编辑<code>vim ~/.vimrc</code>，文件最后添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">colorscheme gruvbox</div><div class="line">set background=dark    &quot; Setting dark mode</div><div class="line">let g:gruvbox_contrast_dark=&apos;hard&apos;</div><div class="line">let g:airline_theme=&apos;simple&apos;</div></pre></td></tr></table></figure>
+<p>最后启用下新的配置<code>source ~/.vimrc</code></p>
 <h1 id="vim打开nginx高亮"><a href="#vim打开nginx高亮" class="headerlink" title="vim打开nginx高亮"></a>vim打开nginx高亮</h1><p>vim并不支持nginx的高亮，但是可以通过nginx.vim来针对性的给出高亮，具体的代码如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mkdir -p ~/.vim/syntax/</div><div class="line"></div><div class="line">wget -O ~/.vim/syntax/nginx.vim http://www.vim.org/scripts/download_script.php?src_id=14376</div><div class="line"></div><div class="line"># /usr/local/etc/nginx/vhosts/*为nginx配置文件存放目录</div><div class="line">echo &quot;au BufRead,BufNewFile /usr/local/etc/nginx/vhosts/* set ft=nginx&quot; &gt;&gt; ~/.vim/filetype.vim</div></pre></td></tr></table></figure>
 <p>效果不错哟<br><img src="/media/nginx_highlight.png" alt="nginx_highlight"></p>
@@ -461,6 +463,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/02/07/qcloud-docker/" rel="prev" title="腾讯云安装docker服务及镜像加速配置 - Ubuntu">
+                腾讯云安装docker服务及镜像加速配置 - Ubuntu <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -486,7 +492,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/06/vim/"
-           data-title="Vim支持Nginx的语法高亮 - Ubuntu" data-url="http://aleonchen.com/2017/02/06/vim/">
+           data-title="让Vim支持Nginx语法高亮 - Ubuntu" data-url="http://aleonchen.com/2017/02/06/vim/">
       </div>
     
   </div>
@@ -533,7 +539,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -544,7 +550,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
