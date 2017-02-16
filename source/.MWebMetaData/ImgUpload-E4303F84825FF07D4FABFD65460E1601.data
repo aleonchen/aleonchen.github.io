@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>01D2129B8DD7CF5E79A10AE199BFC5BF</key>
+	<array>
+		<dict>
+			<key>localURL</key>
+			<string>/media/nginx_highlight.png</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-02-13-nginx_highlight.png</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/nginx_highlight.png</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-02-13-nginx_highlight.png</string>
+		</dict>
+	</array>
+	<key>selectedItem</key>
+	<string>01D2129B8DD7CF5E79A10AE199BFC5BF</string>
+</dict>
+</plist>

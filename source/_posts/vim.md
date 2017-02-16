@@ -1,5 +1,5 @@
 ---
-title: Vim支持Nginx的语法高亮 - Ubuntu
+title: 让Vim支持Nginx语法高亮 - Ubuntu
 date: 2017-02-06 16:57:01
 tags: [vim, nginx, gruvbox]
 ---
@@ -70,14 +70,17 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+```
 
+保存之后，再次打开vim 输入 `:PluginInstall`，所有插件装完之后，再次编辑`vim ~/.vimrc`，文件最后添加
+
+```
 colorscheme gruvbox
 set background=dark    " Setting dark mode
 let g:gruvbox_contrast_dark='hard'
 let g:airline_theme='simple'
 ```
-
-保存之后，再次打开vim 输入 `:PluginInstall`，再打开看看。
+最后启用下新的配置`source ~/.vimrc`
 
 # vim打开nginx高亮
 vim并不支持nginx的高亮，但是可以通过nginx.vim来针对性的给出高亮，具体的代码如下
