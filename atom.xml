@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aleonchen.com/"/>
-  <updated>2017-02-07T15:12:30.000Z</updated>
+  <updated>2017-06-17T04:35:12.000Z</updated>
   <id>http://aleonchen.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>兮兮的凉拌黄瓜</title>
+    <link href="http://aleonchen.com/2017/06/17/xixi001/"/>
+    <id>http://aleonchen.com/2017/06/17/xixi001/</id>
+    <published>2017-06-17T04:29:26.000Z</published>
+    <updated>2017-06-17T04:35:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要: 第一次就体验了下蒙氏教学法里面的蒙氏工作，切黄瓜，大人们都觉得好复杂，又是真刀，又是手帕，还有各种器具。然而孩子们的潜力是无穷的，于是老师当堂布置了一项作业，回家和孩子一起做一道菜。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="兮兮" scheme="http://aleonchen.com/tags/%E5%85%AE%E5%85%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>腾讯云安装docker服务及镜像加速配置 - Ubuntu</title>

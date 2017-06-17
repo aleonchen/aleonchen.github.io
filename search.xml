@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[兮兮的凉拌黄瓜]]></title>
+      <url>%2F2017%2F06%2F17%2Fxixi001%2F</url>
+      <content type="text"><![CDATA[摘要: 第一次就体验了下蒙氏教学法里面的蒙氏工作，切黄瓜，大人们都觉得好复杂，又是真刀，又是手帕，还有各种器具。然而孩子们的潜力是无穷的，于是老师当堂布置了一项作业，回家和孩子一起做一道菜。 第一次上了幼儿园开的家长课，蒙氏教育与家庭教育第一次就体验了下蒙氏教学法里面的蒙氏工作，切黄瓜，大人们都觉得好复杂，又是真刀，又是手帕，还有各种器具。然而孩子们的潜力是无穷的，于是老师当堂布置了一项作业，回家和孩子一起做一道菜。 回家问兮兮我们做什么菜，她想都没想说，我们做拌黄瓜。于是我作为一个忠实的摄影师和客户记录下整个制作过程，也交上作业。 准备制作之前最重要的是准备工作，我和兮兮一起回忆了蒙氏工作里面所需要的道具。 菜刀、刨子 砧板 布 碗 酱油 糖和盐 还有最重要的–黄瓜 开动洗完手就开始啦，没想到兮兮小朋友的手这么灵巧，看来平时在幼儿园的工作也做的不错]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[腾讯云安装docker服务及镜像加速配置 - Ubuntu]]></title>
       <url>%2F2017%2F02%2F07%2Fqcloud-docker%2F</url>
       <content type="text"><![CDATA[摘要: docker为应用部署、应用持续集成提供非常巨大的遍历性，提升了效率，同时为架构的横向扩张提供了非常好的基础。本文介绍了如何在腾讯云的服务器上自行搭建一个docker服务 系统选择因为docker对于系统还是有要求的，推荐使用最新的系统，我用的是Ubuntu 16.4 64bit 一键安装dockerCongratulations! 腾讯云也出了官方的加速服务 链接。可惜一键安装脚本还没有，我们暂时用阿里的好了 1curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh - 把默认用户加入docker组，免得每次都敲sudo（懒是优秀程序员必备的品质 :p) 1sudo usermod -aG docker ubuntu 设置镜像加速因为我安装的时候docker版本是1.13.0，腾讯官方给的方式还是比较旧的，建议采取修改json配置的方式更方便。可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器： 12345678sudo mkdir -p /etc/dockersudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;&#123; &quot;registry-mirrors&quot;: [&quot;https://mirror.ccs.tencentyun.com&quot;]&#125;EOFsudo systemctl daemon-reloadsudo systemctl restart docker 其他方法：编辑 /etc/systemd/system/multi-user.target.wants/docker.service 文件，找到 ExecStart= 这一行，在这行最后添加加速器地址 –registry-mirror=&lt;加速器地址&gt;，如：ExecStart=/usr/bin/dockerd --registry-mirror=&lt;加速器地址&gt; 测试安装结果修改好了之后确认一下，用docker info看看是不是和我一样设置正确了 12Registry Mirrors: https://mirror.ccs.tencentyun.com 测试是好习惯 1docker run --rm --name webserver -d -p 80:80 nginx 访问下http://&lt;you-server-ip&gt;，docker就起来啦 碰到问题或者需要咨询欢迎在这里或者去公众号留言]]></content>
