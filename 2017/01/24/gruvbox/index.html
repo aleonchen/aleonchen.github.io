@@ -379,9 +379,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/24/gruvbox/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/01/24/gruvbox/" itemprop="commentCount"></span>
+                <a class="cloud-tie-join-count" href="/2017/01/24/gruvbox/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -532,12 +531,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -821,26 +815,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aleonchen.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://aleonchen.com/2017/01/24/gruvbox/';
-          this.page.identifier = '2017/01/24/gruvbox/';
-          this.page.title = '一个高逼格的代码高亮配色gruvbox';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aleonchen.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -851,12 +825,19 @@
 
 
   
-
-
-
-
-
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "da045c6f35d246ff8fa797f5da9af84e",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
+
+
 
 
 
