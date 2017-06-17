@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://aleonchen.com/media/mta_sum-1.png">
 <meta property="og:image" content="http://aleonchen.com/media/mta_sum-1.png">
 <meta property="og:image" content="http://aleonchen.com/media/mta_devices-1.png">
-<meta property="og:updated_time" content="2017-02-06T01:28:06.000Z">
+<meta property="og:updated_time" content="2017-06-17T16:30:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo添加腾讯移动分析(MTA)支持">
 <meta name="twitter:description" content="摘要：本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程">
@@ -419,7 +419,10 @@
       
         <p>摘要：本文介绍了为Hexo中NexT主题模板添加“腾讯移动分析(MTA)”的详细过程，并开源在GitHub上，可以了解为hexo添加第三方hexo的过程<br><img src="/media/mta_sum-1.png" alt="mta_su"></p>
 <a id="more"></a>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了<a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT的模板</a>也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置指南</a>，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><blockquote>
+<p>update:<br>已经被官方merge <a href="http://theme-next.iissnan.com/third-party-services.html#analytics-system" target="_blank" rel="external">http://theme-next.iissnan.com/third-party-services.html#analytics-system</a></p>
+</blockquote>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>搭建好了Hexo的博客之后，今天有空稍微整理下，目前选了<a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT的模板</a>也是目前使用的主题，这个主题非常优雅，感谢作者iissnan。按照作者的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置指南</a>，完善了下博客的配置，打开了多说评论、安装了阅读技术等等。</p>
 <h2 id="腾讯统计"><a href="#腾讯统计" class="headerlink" title="腾讯统计"></a>腾讯统计</h2><p>在弄数据统计的时候，发现除了Google、Baidu的统计，腾讯的统计模块还是非常旧的ta.qq.com的统计支持。这个应用腾讯官方已经基本不维护了，目前官方推荐的是使用<a href="mta.qq.com">腾讯移动分析</a>，不仅可以支持应用统计、HTML5网页统计甚至还有小程序的统计。支持用户画像、区域和行为分析等。之前项目使用MTA比较熟悉，所以也想自己的Blog可以支持。<br><img src="/media/mta_sum-1.png" alt="mta_su"><br><img src="/media/mta_devices-1.png" alt="mta_devices"></p>
 <h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><p>稍微研究了下NexT的代码，其实只要修改三个地方就可以了。</p>
 <p>1.在NexT的<code>_config.yml</code>下面添加一个MTA的设置，MTA只要去创建一个HTML5的应用即可，填入你所申请的<code>App Id</code></p>
