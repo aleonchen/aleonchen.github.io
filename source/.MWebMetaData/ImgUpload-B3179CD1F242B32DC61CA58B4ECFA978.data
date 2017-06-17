@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>01D2129B8DD7CF5E79A10AE199BFC5BF</key>
+	<array>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E5%87%86%E5%A4%87.jpg</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-准备.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E5%88%87%E5%AE%8C.jpg</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-切完.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E5%88%87%E7%93%9C1.gif</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-切瓜1.gif</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E5%88%87%E7%93%9C.jpg</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-切瓜.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E6%94%BE%E6%96%99.jpg</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-放料.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E6%8B%8C%E9%BB%84%E7%93%9C.gif</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-拌黄瓜.gif</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>/media/%E5%87%BA%E9%95%9C.jpg</string>
+			<key>remoteURL</key>
+			<string>http://
+域名	协议	类型	状态	
+http://cdn.xingyizhe.com.cn/2017-06-17-出镜.jpg</string>
+		</dict>
+	</array>
+	<key>selectedItem</key>
+	<string>01D2129B8DD7CF5E79A10AE199BFC5BF</string>
+</dict>
+</plist>
