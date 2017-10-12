@@ -81,7 +81,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="gruvbox,vim,nginx," />
+  <meta name="keywords" content="vim,nginx,gruvbox," />
 
 
 
@@ -378,8 +378,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/02/06/vim/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                <a href="/2017/02/06/vim/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/02/06/vim/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -473,11 +474,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/gruvbox/" rel="tag"># gruvbox</a>
-          
             <a href="/tags/vim/" rel="tag"># vim</a>
           
             <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+            <a href="/tags/gruvbox/" rel="tag"># gruvbox</a>
           
         </div>
       
@@ -528,7 +529,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -809,6 +815,26 @@
 
   
 
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://aleonchen.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aleonchen.com/2017/02/06/vim/';
+          this.page.identifier = '2017/02/06/vim/';
+          this.page.title = '让Vim支持Nginx语法高亮 - Ubuntu';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aleonchen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
